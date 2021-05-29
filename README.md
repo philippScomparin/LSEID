@@ -1,2 +1,2 @@
-# LSEID
-Legal, Social, Ethical Impact of Data Vocabulary (LSEID)
+# Legal, Social, and Ethical Impact of Data Vocabulary (LSEID)
+
