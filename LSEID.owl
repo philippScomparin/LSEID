@@ -170,6 +170,227 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#author">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#date">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#LegalBasis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#description">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Group"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#LegalBasis"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#SecurityMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#impact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#impact">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#initialDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#initialDate">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isAnonymized -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isAnonymized">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isPersonalData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isPersonalData">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isPseudonymized -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isPseudonymized">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isSensitiveData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isSensitiveData">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isVulnerable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isVulnerable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#lastDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#lastDate">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#levelOfImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#levelOfImpact">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#likeliness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#likeliness">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#method -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#method">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#purpose">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#reviewFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#reviewFrequency">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#role">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#text">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#type">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#year">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
