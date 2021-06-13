@@ -70,9 +70,9 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#affects -->
+    <!-- http://www.lseid.org/ns/lseid#affectsGroup -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#affects">
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#affectsGroup">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Group"/>
     </owl:ObjectProperty>
@@ -131,18 +131,18 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#elaborates -->
+    <!-- http://www.lseid.org/ns/lseid#elaboratesEvaluation -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#elaborates">
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#elaboratesEvaluation">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#follows -->
+    <!-- http://www.lseid.org/ns/lseid#followsGuideline -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#follows">
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#followsGuideline">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
     </owl:ObjectProperty>
@@ -181,6 +181,24 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasSecurityMeasure">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#SecurityMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#isAbout">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#producesOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#producesOutcome">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
+        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
     </owl:ObjectProperty>
     
 
@@ -224,35 +242,145 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#author -->
+    <!-- http://www.lseid.org/ns/lseid#authorOfData -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#author">
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#authorOfData">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Specifies who collected the data</rdfs:comment>
+        <rdfs:label>authorOfData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#authorOfGuideline -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#authorOfGuideline">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The author of the guideline</rdfs:comment>
+        <rdfs:label>authorOfGuideline</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#date -->
+    <!-- http://www.lseid.org/ns/lseid#dateOfGuideline -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#date">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#dateOfGuideline">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>The publication date of the guideline</rdfs:comment>
+        <rdfs:label>dateOfGuideline</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#dateOfLegalBasis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#dateOfLegalBasis">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#LegalBasis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The date when the legal basis was defined</rdfs:comment>
+        <rdfs:label>dateOfLegalBasis</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#description -->
+    <!-- http://www.lseid.org/ns/lseid#dateOfOutcome -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#description">
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#dateOfOutcome">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The date when the outcome was produced</rdfs:comment>
+        <rdfs:label>dateOfOutcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfBias -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfBias">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Detailed description of the bias (i.e. 85% male data vs 15% female data)</rdfs:comment>
+        <rdfs:label>descriptionOfBias</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfDataApplication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfDataApplication">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Detailed description of the usage of the data</rdfs:comment>
+        <rdfs:label>descriptionOfDataApplication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfGroup">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of the group (i.e. composition of the group)</rdfs:comment>
+        <rdfs:label>descriptionOfGroup</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfLegalBasis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfLegalBasis">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#LegalBasis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Detailed description of how and which laws were obeyed</rdfs:comment>
+        <rdfs:label>descriptionOfLegalBasis</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfRisk">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Detailed description of the risk</rdfs:comment>
+        <rdfs:label>descriptionOfRisk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#descriptionOfSecurityMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfSecurityMeasure">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#SecurityMeasure"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Detailed description of the taken measure to mitigate a risk</rdfs:comment>
+        <rdfs:label>descriptionOfSecurityMeasure</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#evaluationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#evaluationDate">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The date of the evaluation</rdfs:comment>
+        <rdfs:label>evaluationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#evaluationText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#evaluationText">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The content of an evaluation</rdfs:comment>
+        <rdfs:label>evaluationText</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -262,6 +390,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#impact">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of the impact</rdfs:comment>
+        <rdfs:label>impact</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -271,6 +401,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#initialDate">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Specifies when the data collection started</rdfs:comment>
+        <rdfs:label>initialDate</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -280,6 +412,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isAnonymized">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether the data is anonymized</rdfs:comment>
+        <rdfs:comment>isAnonymized</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -289,6 +423,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isPersonalData">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether the data contains personal data</rdfs:comment>
+        <rdfs:label>isPersonalData</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -298,6 +434,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isPseudonymized">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether the data is pseudonymized</rdfs:comment>
+        <rdfs:label>isPseudonymized</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -307,6 +445,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isSensitiveData">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether the data contains sensitive data</rdfs:comment>
+        <rdfs:label>isSensitiveData</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -315,6 +455,10 @@
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isVulnerable">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Specifies whether the data subject belongs to the group of vulnerable people</rdfs:comment>
+        <rdfs:label>isVulnerable</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -324,6 +468,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#lastDate">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Specifies when the data collection ended</rdfs:comment>
+        <rdfs:label>lastDate</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -333,6 +479,7 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#levelOfImpact">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of how mch the impact will be (i.e. high, low)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -341,6 +488,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#likeliness">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of how probable the event is going to happen</rdfs:comment>
+        <rdfs:label>likeliness</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -350,26 +500,53 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#method">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Specifies how data was collected</rdfs:comment>
+        <rdfs:label>method</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#name -->
+    <!-- http://www.lseid.org/ns/lseid#nameOfAuthority -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#name">
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#nameOfAuthority">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The name of the corresponding authority</rdfs:comment>
+        <rdfs:label>nameOfAuthority</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#purpose -->
+    <!-- http://www.lseid.org/ns/lseid#nameOfStakeholder -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#purpose">
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#nameOfStakeholder">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The name of the stakeholder</rdfs:comment>
+        <rdfs:label>nameOfStakeholder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#outcomeDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#outcomeDescription">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Detailed description of the outcome</rdfs:comment>
+        <rdfs:label>outcomeDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#purposeOfData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#purposeOfData">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of the reason why the data was collected</rdfs:comment>
+        <rdfs:label>purposeOfData</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -389,38 +566,63 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>The role of the stakeholder (i.e. Business Owner, DPO, etc.)</rdfs:comment>
+        <rdfs:label>nameOfStakeholder</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#text -->
+    <!-- http://www.lseid.org/ns/lseid#typeOfAssessment -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#text">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.lseid.org/ns/lseid#type -->
-
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#type">
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfAssessment">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of assessment type (i.e. DPIA, Ethical Assessment, etc.)</rdfs:comment>
+        <rdfs:label>typeOfAssessment</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#year -->
+    <!-- http://www.lseid.org/ns/lseid#typeOfBias -->
 
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#year">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfBias">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of the type of the bias (i.e. unbalanced data)</rdfs:comment>
+        <rdfs:label>typeOfBias</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#typeOfData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfData">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Description of the data</rdfs:comment>
+        <rdfs:label>typeOfData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#typeOfDataApplication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfDataApplication">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Specifies whether it is the main data application, a discouraged data application or an other possibility to use the data</rdfs:comment>
+        <rdfs:label>typeOfDataApplication</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#typeOfDataSubject -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfDataSubject">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Specifies who the data subject is (i.e. adult, child, etc.)</rdfs:comment>
+        <rdfs:label>typeOfDataSubject</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -515,31 +717,46 @@
 
     <!-- http://www.lseid.org/ns/lseid#Assessment -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Assessment"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Assessment">
+        <rdfs:comment>A judgement about something</rdfs:comment>
+        <rdfs:label>Assessment</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Authority -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Authority"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Authority">
+        <rdfs:comment>An official institution</rdfs:comment>
+        <rdfs:label>Authority</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Bias -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Bias"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Bias">
+        <rdfs:comment>Something that is not equally representative for every affected group</rdfs:comment>
+        <rdfs:label>Bias</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Data -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Data"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Data">
+        <rdfs:comment>A piece of information</rdfs:comment>
+        <rdfs:label>Data</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#DataApplication -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataApplication"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataApplication">
+        <rdfs:comment>Usage of data</rdfs:comment>
+        <rdfs:label>DataApplication</rdfs:label>
+    </owl:Class>
     
 
 
@@ -547,13 +764,18 @@
 
     <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataController">
         <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:comment>A stakeholder that controls the data</rdfs:comment>
+        <rdfs:label>DataController</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#DataSource -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataSource"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataSource">
+        <rdfs:comment>Specifies where data comes from</rdfs:comment>
+        <rdfs:label>DataSource</rdfs:label>
+    </owl:Class>
     
 
 
@@ -561,49 +783,81 @@
 
     <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataSubject">
         <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:comment>The person whose data is being collected</rdfs:comment>
+        <rdfs:label>DataSubject</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Evaluation -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Evaluation"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Evaluation">
+        <rdfs:comment>The outcome or response to a request</rdfs:comment>
+        <rdfs:label>Evaluation</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Group -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Group"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Group">
+        <rdfs:comment>Various people that share a common characterstic</rdfs:comment>
+        <rdfs:label>Group</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Guideline -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Guideline"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Guideline">
+        <rdfs:comment>A common standard or step to step guide</rdfs:comment>
+        <rdfs:label>Guideline</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#LegalBasis -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#LegalBasis"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#LegalBasis">
+        <rdfs:comment>Entity that describes how laws were obeyed</rdfs:comment>
+        <rdfs:label>LegalBasis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#Outcome -->
+
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Outcome">
+        <rdfs:comment>The result produced by a guideline</rdfs:comment>
+        <rdfs:label>Outcome</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Risk -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Risk"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Risk">
+        <rdfs:comment>An unconvenient event</rdfs:comment>
+        <rdfs:label>Risk</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#SecurityMeasure -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#SecurityMeasure"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#SecurityMeasure">
+        <rdfs:comment>A taken measure to mitigate a risk</rdfs:comment>
+        <rdfs:label>SecurityMeasure</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.lseid.org/ns/lseid#Stakeholder -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Stakeholder"/>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Stakeholder">
+        <rdfs:comment>A person (or authority) of interest</rdfs:comment>
+        <rdfs:label>Stakeholder</rdfs:label>
+    </owl:Class>
     
 
 
