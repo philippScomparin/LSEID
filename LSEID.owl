@@ -124,6 +124,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#affectsGroup">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Group"/>
+        <rdfs:comment>Indicates which groups are affected by the Data Application</rdfs:comment>
+        <rdfs:label>affectsGroup</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -133,6 +135,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#conducts">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
+        <rdfs:comment>Indicates that a Stakeholder conducts an Assessment</rdfs:comment>
+        <rdfs:label>conducts</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -143,6 +147,8 @@
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataController"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#DataController"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
+        <rdfs:comment>Indicates that Data Controller consults with an Authority over a dataset and it&apos;s possible applications</rdfs:comment>
+        <rdfs:label>consultsWith</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -150,7 +156,10 @@
     <!-- http://www.lseid.org/ns/lseid#containsBias -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#containsBias">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Bias"/>
+        <rdfs:comment>Indicates what kind of Bias a dataset contains</rdfs:comment>
+        <rdfs:label>containsBias</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -158,7 +167,10 @@
     <!-- http://www.lseid.org/ns/lseid#containsData -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#containsData">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:comment>Indicates the content of the dataset</rdfs:comment>
+        <rdfs:label>containsData</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -169,6 +181,8 @@
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataController"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#DataController"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:comment>Indicates the Data a Data Controller controls</rdfs:comment>
+        <rdfs:label>controls</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -178,6 +192,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#derivedFrom">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:comment>Indicates where Data was taken from</rdfs:comment>
+        <rdfs:label>derivedFrom</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -187,6 +203,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#elaboratesEvaluation">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:comment>Indicates the result of a consultation of an Authority with a Data Controller</rdfs:comment>
+        <rdfs:label>elaboratesEvaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -196,6 +214,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#followsGuideline">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
+        <rdfs:comment>Indicates what Guideline was used for carrying out an Assessment</rdfs:comment>
+        <rdfs:label>followsGuideline</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -206,6 +226,8 @@
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#DataSubject"/>
+        <rdfs:comment>Indicates who the Data Subjects are</rdfs:comment>
+        <rdfs:label>hasDataSubject</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -215,6 +237,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasLegalBasis">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#LegalBasis"/>
+        <rdfs:comment>Indicates the Legal Basis of the Data Source.</rdfs:comment>
+        <rdfs:label>hasLegalBasis</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -225,6 +249,8 @@
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Risk"/>
+        <rdfs:comment>Indicates the Risk of a DataApplication</rdfs:comment>
+        <rdfs:label>hasRisk</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -236,6 +262,8 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Risk"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#SecurityMeasure"/>
+        <rdfs:comment>Indicates the security measure taken to avoid unoconvenient events to happen</rdfs:comment>
+        <rdfs:label>hasSecurityMeasure</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -245,6 +273,7 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#isAbout">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:comment>Indicates the Data Application that was evaluated</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -254,6 +283,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#producesOutcome">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
+        <rdfs:comment>Indicates the Outcome after using a Guideline</rdfs:comment>
+        <rdfs:label>producesOutcome</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -263,6 +294,8 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#usedFor">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:label>Indicates the usage of the Data</rdfs:label>
+        <rdfs:label>usedFor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -583,6 +616,17 @@
     
 
 
+    <!-- http://www.lseid.org/ns/lseid#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#size">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>Size of data in MB</rdfs:comment>
+        <rdfs:label>size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.lseid.org/ns/lseid#typeOfAssessment -->
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#typeOfAssessment">
@@ -633,51 +677,6 @@
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSubject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#byteSize -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment xml:lang="es">El tamaño de una distribución en bytes.</rdfs:comment>
-        <rdfs:comment xml:lang="it">La dimensione di una distribuzione in byte.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">La taille de la distribution en octects</rdfs:comment>
-        <rdfs:comment xml:lang="da">Størrelsen af en distributionen angivet i bytes.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The size of a distribution in bytes.</rdfs:comment>
-        <rdfs:comment xml:lang="cs">Velikost distribuce v bajtech.</rdfs:comment>
-        <rdfs:comment xml:lang="el">Το μέγεθος μιας διανομής σε bytes.</rdfs:comment>
-        <rdfs:comment xml:lang="ar">الحجم بالبايتات </rdfs:comment>
-        <rdfs:comment xml:lang="ja">バイトによる配信のサイズ。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
-        <rdfs:label xml:lang="en">byte size</rdfs:label>
-        <rdfs:label xml:lang="da">bytestørrelse</rdfs:label>
-        <rdfs:label xml:lang="it">dimensione in byte</rdfs:label>
-        <rdfs:label xml:lang="fr">taille en octects</rdfs:label>
-        <rdfs:label xml:lang="es">tamaño en bytes</rdfs:label>
-        <rdfs:label xml:lang="cs">velikost v bajtech</rdfs:label>
-        <rdfs:label xml:lang="el">μέγεθος σε bytes</rdfs:label>
-        <rdfs:label xml:lang="ar">الحجم بالبايت</rdfs:label>
-        <rdfs:label xml:lang="ja">バイト・サイズ</rdfs:label>
-        <skos:definition xml:lang="es">El tamaño de una distribución en bytes.</skos:definition>
-        <skos:definition xml:lang="it">La dimensione di una distribuzione in byte.</skos:definition>
-        <skos:definition xml:lang="fr">La taille de la distribution en octects.</skos:definition>
-        <skos:definition xml:lang="da">Størrelsen af en distribution angivet i bytes.</skos:definition>
-        <skos:definition xml:lang="en">The size of a distribution in bytes.</skos:definition>
-        <skos:definition xml:lang="cs">Velikost distribuce v bajtech.</skos:definition>
-        <skos:definition xml:lang="el">Το μέγεθος μιας διανομής σε bytes.</skos:definition>
-        <skos:definition xml:lang="ar">الحجم بالبايتات </skos:definition>
-        <skos:definition xml:lang="ja">バイトによる配信のサイズ。</skos:definition>
-        <skos:scopeNote xml:lang="da">Bytestørrelsen kan approximeres hvis den præcise størrelse ikke er kendt. Værdien af dcat:byteSize bør angives som xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="es">El tamaño en bytes puede ser aproximado cuando se desconoce el tamaño exacto. El valor literal de dcat:byteSize debe tener tipo &apos;xsd:decimal&apos;.</skos:scopeNote>
-        <skos:scopeNote xml:lang="it">La dimensione in byte può essere approssimata quando non si conosce la dimensione precisa. Il valore di dcat:byteSize dovrebbe essere espresso come un xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="fr">La taille en octects peut être approximative lorsque l&apos;on ignore la taille réelle. La valeur littérale de dcat:byteSize doit être de type xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="en">The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="cs">Velikost v bajtech může být přibližná, pokud její přesná hodnota není známa. Literál s hodnotou dcat:byteSize by měl mít datový typ xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="el">Το μέγεθος σε bytes μπορεί να προσεγγιστεί όταν η ακριβής τιμή δεν είναι γνωστή. Η τιμή της dcat:byteSize θα πρέπει να δίνεται με τύπο δεδομένων xsd:decimal.</skos:scopeNote>
-        <skos:scopeNote xml:lang="ar">الحجم يمكن أن يكون تقريبي إذا كان الحجم الدقيق غير معروف</skos:scopeNote>
-        <skos:scopeNote xml:lang="ja">正確なサイズが不明である場合、サイズは、バイトによる近似値を示すことができます。</skos:scopeNote>
-    </owl:DatatypeProperty>
     
 
 
