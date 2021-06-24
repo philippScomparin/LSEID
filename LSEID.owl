@@ -122,7 +122,7 @@
     <!-- http://www.lseid.org/ns/lseid#affectsGroup -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#affectsGroup">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Group"/>
         <rdfs:comment>Indicates which groups are affected by the Data Application</rdfs:comment>
         <rdfs:label>affectsGroup</rdfs:label>
@@ -130,13 +130,13 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#conducts -->
+    <!-- http://www.lseid.org/ns/lseid#conductsAssessment -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#conducts">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#conductsAssessment">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#OrganizationalStakeholder"/>
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
-        <rdfs:comment>Indicates that a Stakeholder conducts an Assessment</rdfs:comment>
-        <rdfs:label>conducts</rdfs:label>
+        <rdfs:comment>Used to describe the conduction of an Assessment by an organizational Stakeholder</rdfs:comment>
+        <rdfs:label>conductsAssessment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -170,17 +170,6 @@
         <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:comment>Indicates the content of the dataset</rdfs:comment>
         <rdfs:label>containsData</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.lseid.org/ns/lseid#elaboratesEvaluation -->
-
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#elaboratesEvaluation">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
-        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
-        <rdfs:comment>Indicates the result of a consultation of an Authority with a Data Controller</rdfs:comment>
-        <rdfs:label>elaboratesEvaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -232,10 +221,21 @@
     <!-- http://www.lseid.org/ns/lseid#hasLegalBasis -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasLegalBasis">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#LegalBasis"/>
-        <rdfs:comment>Indicates the Legal Basis of the Data Source.</rdfs:comment>
+        <rdfs:comment>Indicates the Legal Basis for data processing</rdfs:comment>
         <rdfs:label>hasLegalBasis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasPurpose">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Purpose"/>
+        <rdfs:comment>Used to define the purpose of the data processing</rdfs:comment>
+        <rdfs:label>hasPurpose</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -243,7 +243,7 @@
     <!-- http://www.lseid.org/ns/lseid#hasRisk -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasRisk">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Risk"/>
         <rdfs:comment>Indicates the Risk of a DataApplication</rdfs:comment>
         <rdfs:label>hasRisk</rdfs:label>
@@ -273,12 +273,34 @@
     
 
 
+    <!-- http://www.lseid.org/ns/lseid#involvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#involvedIn">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+        <rdfs:comment>Used to describe how data is bein processed</rdfs:comment>
+        <rdfs:label>involvedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.lseid.org/ns/lseid#isAbout -->
 
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#isAbout">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
-        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:comment>Indicates the Data Application that was evaluated</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#isAboutProcessing -->
+
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#isAboutProcessing">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
+        <rdfs:comment>Used to describe the data processing that the assessment is targeting</rdfs:comment>
+        <rdfs:label>isAboutProcessing</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -294,24 +316,24 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#producesOutcome -->
+    <!-- http://www.lseid.org/ns/lseid#producesEvaluation -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#producesOutcome">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Guideline"/>
-        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
-        <rdfs:comment>Indicates the Outcome after using a Guideline</rdfs:comment>
-        <rdfs:label>producesOutcome</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#producesEvaluation">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
+        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Evaluation"/>
+        <rdfs:comment>Indicates the result of a consultation of an Authority with a Data Controller</rdfs:comment>
+        <rdfs:label>producesEvaluation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#usedFor -->
+    <!-- http://www.lseid.org/ns/lseid#producesOutcome -->
 
-    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#usedFor">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
-        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
-        <rdfs:label>Indicates the usage of the Data</rdfs:label>
-        <rdfs:label>usedFor</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#producesOutcome">
+        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
+        <rdfs:range rdf:resource="http://www.lseid.org/ns/lseid#Outcome"/>
+        <rdfs:comment>Used to describe the Outcome of an Assessment</rdfs:comment>
+        <rdfs:label>producesOutcome</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -319,7 +341,6 @@
     <!-- https://www.w3.org/ns/dqv#hasQualityMeasurement -->
 
     <owl:ObjectProperty rdf:about="https://www.w3.org/ns/dqv#hasQualityMeasurement">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
     </owl:ObjectProperty>
@@ -405,7 +426,7 @@
     <!-- http://www.lseid.org/ns/lseid#descriptionOfDataApplication -->
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfDataApplication">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Detailed description of the usage of the data</rdfs:comment>
         <rdfs:label>descriptionOfDataApplication</rdfs:label>
@@ -515,7 +536,6 @@
     <!-- http://www.lseid.org/ns/lseid#isVulnerable -->
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isVulnerable">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#DataSubject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>Specifies whether the data subject belongs to the group of vulnerable people</rdfs:comment>
@@ -570,7 +590,6 @@
     <!-- http://www.lseid.org/ns/lseid#nameOfAuthority -->
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#nameOfAuthority">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Authority"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>The name of the corresponding authority</rdfs:comment>
@@ -617,6 +636,8 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#reviewFrequency">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Assessment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Used to describe how frequently an Assessment is being reviewed</rdfs:comment>
+        <rdfs:label>reviewFrequency</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -731,15 +752,6 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#DataApplication -->
-
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataApplication">
-        <rdfs:comment>Usage of data</rdfs:comment>
-        <rdfs:label>DataApplication</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.lseid.org/ns/lseid#DataSource -->
 
     <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DataSource">
@@ -749,12 +761,12 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#DiscouragedDataApplication -->
+    <!-- http://www.lseid.org/ns/lseid#DiscouragedPurpose -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DiscouragedDataApplication">
-        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
-        <rdfs:comment>This class serves to enable data publishers to define data applications that are discouraged for a dataset.</rdfs:comment>
-        <rdfs:label>DiscouragedDataApplication</rdfs:label>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#DiscouragedPurpose">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Purpose"/>
+        <rdfs:comment>Discouraged purpose defines a data application that is considered to be risky, not ethical or problematic in any other form</rdfs:comment>
+        <rdfs:label>DiscouragedPurpose</rdfs:label>
     </owl:Class>
     
 
@@ -786,6 +798,16 @@
     
 
 
+    <!-- http://www.lseid.org/ns/lseid#InitialPurpose -->
+
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#InitialPurpose">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Purpose"/>
+        <rdfs:comment>The main purpose. This is the initial idea on how and wh to process the data</rdfs:comment>
+        <rdfs:label>InitialPurpose</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.lseid.org/ns/lseid#Measure -->
 
     <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Measure">
@@ -795,12 +817,22 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#OtherDataApplication -->
+    <!-- http://www.lseid.org/ns/lseid#OrganizationalStakeholder -->
 
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#OtherDataApplication">
-        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
-        <rdfs:comment>This class can be used for all data applications that are neither predetermined nor discouraged for a dataset.</rdfs:comment>
-        <rdfs:label>OtherDataApplication</rdfs:label>
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#OrganizationalStakeholder">
+        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:comment>Stakeholder that can be considered as an organized entity or institution</rdfs:comment>
+        <rdfs:label>OrganizationalStakeholder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.lseid.org/ns/lseid#OtherPurpose -->
+
+    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#OtherPurpose">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Purpose"/>
+        <rdfs:comment>Used for any purpose that is neither considered to be the inital purpose nor a discouraged purpose</rdfs:comment>
+        <rdfs:label>OtherPurpose</rdfs:label>
     </owl:Class>
     
 
@@ -810,16 +842,6 @@
     <owl:Class rdf:about="http://www.lseid.org/ns/lseid#Outcome">
         <rdfs:comment>The result produced by a guideline</rdfs:comment>
         <rdfs:label>Outcome</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.lseid.org/ns/lseid#PredeterminedDataApplication -->
-
-    <owl:Class rdf:about="http://www.lseid.org/ns/lseid#PredeterminedDataApplication">
-        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#DataApplication"/>
-        <rdfs:comment>The main data application of a dataset. This class serves to define a predetermined and encouraged usage for the data.</rdfs:comment>
-        <rdfs:label>PredeterminedDataApplication</rdfs:label>
     </owl:Class>
     
 
@@ -910,7 +932,7 @@
     <!-- http://www.w3.org/ns/dpv#DataController -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#DataController">
-        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#Stakeholder"/>
+        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#OrganizationalStakeholder"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-05</terms:created>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axel Polleres</terms:creator>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Javier Ferenandez</terms:creator>
@@ -919,6 +941,21 @@
         <rdfs:comment xml:lang="en">The terms &apos;Controller&apos; is usually the more common form of indicating a Data Controller. In ISO/IEC the term &apos;PII Controller&apos; is used.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj"/>
         <rdfs:label xml:lang="en">Data Controller</rdfs:label>
+        <ns:term_status xml:lang="en">accepted</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#DataProtectionOfficer -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#DataProtectionOfficer">
+        <rdfs:subClassOf rdf:resource="http://www.lseid.org/ns/lseid#OrganizationalStakeholder"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Krog</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Ryan</terms:creator>
+        <terms:description xml:lang="en">An entity within or authorised by an organisation to monitor internal compliance, inform and advise on your data protection obligations and act as a contact point for data subjects and the supervisory authority.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj"/>
+        <rdfs:label xml:lang="en">Data Protection Officer</rdfs:label>
         <ns:term_status xml:lang="en">accepted</ns:term_status>
     </owl:Class>
     
@@ -949,6 +986,38 @@
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</terms:modified>
         <rdfs:comment xml:lang="en">Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions.</rdfs:comment>
         <rdfs:label xml:lang="en">Legal Basis</rdfs:label>
+        <ns:term_status xml:lang="en">accepted</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#Processing -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#Processing">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-05</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axel Polleres</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Javier Ferenandez</terms:creator>
+        <terms:description xml:lang="en">The processing performed on personal data</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/"/>
+        <rdfs:label xml:lang="en">Processing</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/langs/usage-policy#AnyProcessing"/>
+        <ns:term_status xml:lang="en">accepted</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dpv#Purpose -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dpv#Purpose">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-04-05</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axel Polleres</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Javier Ferenandez</terms:creator>
+        <terms:description xml:lang="en">The purpose of processing personal data</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-04</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="https://www.specialprivacy.eu/"/>
+        <rdfs:label xml:lang="en">Purpose</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.specialprivacy.eu/langs/usage-policy#AnyPurpose"/>
         <ns:term_status xml:lang="en">accepted</ns:term_status>
     </owl:Class>
     
