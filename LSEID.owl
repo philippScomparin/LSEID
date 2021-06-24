@@ -223,7 +223,7 @@
     <owl:ObjectProperty rdf:about="http://www.lseid.org/ns/lseid#hasLegalBasis">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/dpv#LegalBasis"/>
-        <rdfs:comment>Indicates the Legal Basis for data processing</rdfs:comment>
+        <rdfs:comment>Indicates the legal basis for data processing</rdfs:comment>
         <rdfs:label>hasLegalBasis</rdfs:label>
     </owl:ObjectProperty>
     
@@ -368,17 +368,6 @@
     
 
 
-    <!-- http://www.lseid.org/ns/lseid#authorOfData -->
-
-    <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#authorOfData">
-        <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Specifies who collected the data</rdfs:comment>
-        <rdfs:label>authorOfData</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.lseid.org/ns/lseid#authorOfGuideline -->
 
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#authorOfGuideline">
@@ -428,7 +417,7 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#descriptionOfDataApplication">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Processing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Detailed description of the usage of the data</rdfs:comment>
+        <rdfs:comment>Detailed description of the specific usage of the data</rdfs:comment>
         <rdfs:label>descriptionOfDataApplication</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -538,7 +527,7 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#isVulnerable">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#DataSubject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment>Specifies whether the data subject belongs to the group of vulnerable people</rdfs:comment>
+        <rdfs:comment>Specifies whether the data subject is vulnerable</rdfs:comment>
         <rdfs:label>isVulnerable</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -561,6 +550,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dpv#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Description of how mch the impact will be (i.e. high, low)</rdfs:comment>
+        <rdfs:label>levelOfImpact</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -581,7 +571,7 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#method">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#DataSource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Specifies how data was collected</rdfs:comment>
+        <rdfs:comment>Specifies which method was used to collect the data</rdfs:comment>
         <rdfs:label>method</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -625,7 +615,7 @@
     <owl:DatatypeProperty rdf:about="http://www.lseid.org/ns/lseid#purposeOfCollectingData">
         <rdfs:domain rdf:resource="http://www.lseid.org/ns/lseid#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>Description of the reason why the data was collected</rdfs:comment>
+        <rdfs:comment>Describes the reason for the data collection</rdfs:comment>
         <rdfs:label>purposeOfCollectingData</rdfs:label>
     </owl:DatatypeProperty>
     
