@@ -1,0 +1,678 @@
+<http://www.semanticweb.org/phili/ontologies/2021/4/untitled-ontology-7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/usageNote
+<http://purl.org/vocab/vann/usageNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.lseid.org/ns/lseid#affectsGroup
+<http://www.lseid.org/ns/lseid#affectsGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#affectsGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Purpose> .
+<http://www.lseid.org/ns/lseid#affectsGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Group> .
+<http://www.lseid.org/ns/lseid#affectsGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which groups are affected by the Purpose of the data processing" .
+<http://www.lseid.org/ns/lseid#affectsGroup> <http://www.w3.org/2000/01/rdf-schema#label> "affectsGroup" .
+# 
+# http://www.lseid.org/ns/lseid#conductsAssessment
+<http://www.lseid.org/ns/lseid#conductsAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#conductsAssessment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> .
+<http://www.lseid.org/ns/lseid#conductsAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#conductsAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to describe the execution of an Assessment by an organizational Stakeholder" .
+<http://www.lseid.org/ns/lseid#conductsAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "conductsAssessment" .
+# 
+# http://www.lseid.org/ns/lseid#consultsWith
+<http://www.lseid.org/ns/lseid#consultsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#consultsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#DataController> .
+<http://www.lseid.org/ns/lseid#consultsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Authority> .
+<http://www.lseid.org/ns/lseid#consultsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that Data Controller consults with an Authority over a dataset and it's possible processing applications" .
+<http://www.lseid.org/ns/lseid#consultsWith> <http://www.w3.org/2000/01/rdf-schema#label> "consultsWith" .
+# 
+# http://www.lseid.org/ns/lseid#containsBias
+<http://www.lseid.org/ns/lseid#containsBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#containsBias> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.lseid.org/ns/lseid#containsBias> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Bias> .
+<http://www.lseid.org/ns/lseid#containsBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates what kind of Bias a dataset contains" .
+<http://www.lseid.org/ns/lseid#containsBias> <http://www.w3.org/2000/01/rdf-schema#label> "containsBias" .
+# 
+# http://www.lseid.org/ns/lseid#containsData
+<http://www.lseid.org/ns/lseid#containsData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#containsData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.lseid.org/ns/lseid#containsData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#containsData> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the content of the dataset" .
+<http://www.lseid.org/ns/lseid#containsData> <http://www.w3.org/2000/01/rdf-schema#label> "containsData" .
+# 
+# http://www.lseid.org/ns/lseid#followsGuideline
+<http://www.lseid.org/ns/lseid#followsGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#followsGuideline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#followsGuideline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Guideline> .
+<http://www.lseid.org/ns/lseid#followsGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates what Guideline was used for carrying out an Assessment" .
+<http://www.lseid.org/ns/lseid#followsGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "followsGuideline" .
+# 
+# http://www.lseid.org/ns/lseid#hasDataController
+<http://www.lseid.org/ns/lseid#hasDataController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasDataController> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#hasDataController> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#DataController> .
+<http://www.lseid.org/ns/lseid#hasDataController> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Data Controller of the Data" .
+<http://www.lseid.org/ns/lseid#hasDataController> <http://www.w3.org/2000/01/rdf-schema#label> "hasDataController" .
+# 
+# http://www.lseid.org/ns/lseid#hasDataSource
+<http://www.lseid.org/ns/lseid#hasDataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#DataSource> .
+<http://www.lseid.org/ns/lseid#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates where Data was taken from" .
+<http://www.lseid.org/ns/lseid#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#label> "hasDataSource" .
+# 
+# http://www.lseid.org/ns/lseid#hasDataSubject
+<http://www.lseid.org/ns/lseid#hasDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#DataSubject> .
+<http://www.lseid.org/ns/lseid#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates who the Data Subjects are" .
+<http://www.lseid.org/ns/lseid#hasDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "hasDataSubject" .
+# 
+# http://www.lseid.org/ns/lseid#hasLegalBasis
+<http://www.lseid.org/ns/lseid#hasLegalBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#LegalBasis> .
+<http://www.lseid.org/ns/lseid#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the legal basis for data processing" .
+<http://www.lseid.org/ns/lseid#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#label> "hasLegalBasis" .
+# 
+# http://www.lseid.org/ns/lseid#hasPurpose
+<http://www.lseid.org/ns/lseid#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#Purpose> .
+<http://www.lseid.org/ns/lseid#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to define the purpose of the data processing" .
+<http://www.lseid.org/ns/lseid#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "hasPurpose" .
+# 
+# http://www.lseid.org/ns/lseid#hasRisk
+<http://www.lseid.org/ns/lseid#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the risks of processing the data" .
+<http://www.lseid.org/ns/lseid#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "hasRisk" .
+# 
+# http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#RiskMitigationMeasure> .
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate which mitigation measure has been taken" .
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "hasRiskMitigationMeasure" .
+# 
+# http://www.lseid.org/ns/lseid#hasSecurityMeasure
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#SecurityMeasure> .
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the security measure taken to prevent unoconvenient events" .
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "hasSecurityMeasure" .
+# 
+# http://www.lseid.org/ns/lseid#involvedIn
+<http://www.lseid.org/ns/lseid#involvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#involvedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#involvedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#involvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the data involved in the data processing" .
+<http://www.lseid.org/ns/lseid#involvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "involvedIn" .
+# 
+# http://www.lseid.org/ns/lseid#isAbout
+<http://www.lseid.org/ns/lseid#isAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#isAbout> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Evaluation> .
+<http://www.lseid.org/ns/lseid#isAbout> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#isAbout> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the data processing that was evaluated" .
+<http://www.lseid.org/ns/lseid#isAbout> <http://www.w3.org/2000/01/rdf-schema#label> "isAbout" .
+# 
+# http://www.lseid.org/ns/lseid#isAboutProcessing
+<http://www.lseid.org/ns/lseid#isAboutProcessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#isAboutProcessing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#isAboutProcessing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#isAboutProcessing> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to describe the data processing that the assessment is targeting" .
+<http://www.lseid.org/ns/lseid#isAboutProcessing> <http://www.w3.org/2000/01/rdf-schema#label> "isAboutProcessing" .
+# 
+# http://www.lseid.org/ns/lseid#isAssociatedWith
+<http://www.lseid.org/ns/lseid#isAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#isAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#isAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.lseid.org/ns/lseid#isAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the dataset with which the risk is associated with" .
+<http://www.lseid.org/ns/lseid#isAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "isAssociatedWith" .
+# 
+# http://www.lseid.org/ns/lseid#producesEvaluation
+<http://www.lseid.org/ns/lseid#producesEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#producesEvaluation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Authority> .
+<http://www.lseid.org/ns/lseid#producesEvaluation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Evaluation> .
+<http://www.lseid.org/ns/lseid#producesEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the result of a consultation of an authority with a data controller" .
+<http://www.lseid.org/ns/lseid#producesEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "producesEvaluation" .
+# 
+# http://www.lseid.org/ns/lseid#producesOutcome
+<http://www.lseid.org/ns/lseid#producesOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.lseid.org/ns/lseid#producesOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#producesOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lseid.org/ns/lseid#Outcome> .
+<http://www.lseid.org/ns/lseid#producesOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to describe the outcome of an assessment" .
+<http://www.lseid.org/ns/lseid#producesOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "producesOutcome" .
+# 
+# https://www.w3.org/ns/dqv#hasQualityMeasurement
+<https://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<https://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMeasurement> .
+# 
+# https://www.w3.org/ns/dqv#isMeasurementOf
+<https://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dqv#QualityMeasurement> .
+<https://www.w3.org/ns/dqv#isMeasurementOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#Metric> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.lseid.org/ns/lseid#authorOfDataCollection
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#DataSource> .
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the responsible person or organization of the data collection" .
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "authorOfDataCollection" .
+# 
+# http://www.lseid.org/ns/lseid#authorOfGuideline
+<http://www.lseid.org/ns/lseid#authorOfGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#authorOfGuideline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Guideline> .
+<http://www.lseid.org/ns/lseid#authorOfGuideline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#authorOfGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "The author of the guideline" .
+<http://www.lseid.org/ns/lseid#authorOfGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "authorOfGuideline" .
+# 
+# http://www.lseid.org/ns/lseid#dateOfGuideline
+<http://www.lseid.org/ns/lseid#dateOfGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#dateOfGuideline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Guideline> .
+<http://www.lseid.org/ns/lseid#dateOfGuideline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.lseid.org/ns/lseid#dateOfGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "The publication date of the guideline" .
+<http://www.lseid.org/ns/lseid#dateOfGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "dateOfGuideline" .
+# 
+# http://www.lseid.org/ns/lseid#dateOfOutcome
+<http://www.lseid.org/ns/lseid#dateOfOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#dateOfOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Outcome> .
+<http://www.lseid.org/ns/lseid#dateOfOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#byte> .
+<http://www.lseid.org/ns/lseid#dateOfOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the outcome was produced" .
+<http://www.lseid.org/ns/lseid#dateOfOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "dateOfOutcome" .
+# 
+# http://www.lseid.org/ns/lseid#descriptionOfBias
+<http://www.lseid.org/ns/lseid#descriptionOfBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#descriptionOfBias> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Bias> .
+<http://www.lseid.org/ns/lseid#descriptionOfBias> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#descriptionOfBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed description of the bias (i.e. 85% male data vs 15% female data)" .
+<http://www.lseid.org/ns/lseid#descriptionOfBias> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionOfBias" .
+# 
+# http://www.lseid.org/ns/lseid#descriptionOfDataApplication
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Processing> .
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed description of the specific usage of the data" .
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionOfDataApplication" .
+# 
+# http://www.lseid.org/ns/lseid#descriptionOfGroup
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Group> .
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the group (i.e. composition of the group)" .
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionOfGroup" .
+# 
+# http://www.lseid.org/ns/lseid#descriptionOfMeasure
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#SecurityMeasure> .
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed description of the taken measure" .
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionOfMeasure" .
+# 
+# http://www.lseid.org/ns/lseid#descriptionOfRisk
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed description of the risk" .
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionOfRisk" .
+# 
+# http://www.lseid.org/ns/lseid#evaluationDate
+<http://www.lseid.org/ns/lseid#evaluationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Evaluation> .
+<http://www.lseid.org/ns/lseid#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.lseid.org/ns/lseid#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the evaluation" .
+<http://www.lseid.org/ns/lseid#evaluationDate> <http://www.w3.org/2000/01/rdf-schema#label> "evaluationDate" .
+# 
+# http://www.lseid.org/ns/lseid#evaluationText
+<http://www.lseid.org/ns/lseid#evaluationText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#evaluationText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Evaluation> .
+<http://www.lseid.org/ns/lseid#evaluationText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#evaluationText> <http://www.w3.org/2000/01/rdf-schema#comment> "The content of an evaluation" .
+<http://www.lseid.org/ns/lseid#evaluationText> <http://www.w3.org/2000/01/rdf-schema#label> "evaluationText" .
+# 
+# http://www.lseid.org/ns/lseid#impact
+<http://www.lseid.org/ns/lseid#impact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#impact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#impact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#impact> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the impact" .
+<http://www.lseid.org/ns/lseid#impact> <http://www.w3.org/2000/01/rdf-schema#label> "impact" .
+# 
+# http://www.lseid.org/ns/lseid#initialDate
+<http://www.lseid.org/ns/lseid#initialDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#initialDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#DataSource> .
+<http://www.lseid.org/ns/lseid#initialDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.lseid.org/ns/lseid#initialDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies when the data collection started" .
+<http://www.lseid.org/ns/lseid#initialDate> <http://www.w3.org/2000/01/rdf-schema#label> "initialDate" .
+# 
+# http://www.lseid.org/ns/lseid#isPersonalData
+<http://www.lseid.org/ns/lseid#isPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#isPersonalData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#isPersonalData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.lseid.org/ns/lseid#isPersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether the data contains personal data" .
+<http://www.lseid.org/ns/lseid#isPersonalData> <http://www.w3.org/2000/01/rdf-schema#label> "isPersonalData" .
+# 
+# http://www.lseid.org/ns/lseid#isSensitiveData
+<http://www.lseid.org/ns/lseid#isSensitiveData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#isSensitiveData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#isSensitiveData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.lseid.org/ns/lseid#isSensitiveData> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether the data contains sensitive data" .
+<http://www.lseid.org/ns/lseid#isSensitiveData> <http://www.w3.org/2000/01/rdf-schema#label> "isSensitiveData" .
+# 
+# http://www.lseid.org/ns/lseid#isVulnerable
+<http://www.lseid.org/ns/lseid#isVulnerable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#isVulnerable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#DataSubject> .
+<http://www.lseid.org/ns/lseid#isVulnerable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.lseid.org/ns/lseid#isVulnerable> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether the data subject is vulnerable" .
+<http://www.lseid.org/ns/lseid#isVulnerable> <http://www.w3.org/2000/01/rdf-schema#label> "isVulnerable" .
+# 
+# http://www.lseid.org/ns/lseid#lastDate
+<http://www.lseid.org/ns/lseid#lastDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#lastDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#DataSource> .
+<http://www.lseid.org/ns/lseid#lastDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.lseid.org/ns/lseid#lastDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies when the data collection ended" .
+<http://www.lseid.org/ns/lseid#lastDate> <http://www.w3.org/2000/01/rdf-schema#label> "lastDate" .
+# 
+# http://www.lseid.org/ns/lseid#levelOfImpact
+<http://www.lseid.org/ns/lseid#levelOfImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#levelOfImpact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#levelOfImpact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#levelOfImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the level of the impact (i.e. high, low)" .
+<http://www.lseid.org/ns/lseid#levelOfImpact> <http://www.w3.org/2000/01/rdf-schema#label> "levelOfImpact" .
+# 
+# http://www.lseid.org/ns/lseid#likeliness
+<http://www.lseid.org/ns/lseid#likeliness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#likeliness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#Risk> .
+<http://www.lseid.org/ns/lseid#likeliness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#likeliness> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how probable the event is going to happen" .
+<http://www.lseid.org/ns/lseid#likeliness> <http://www.w3.org/2000/01/rdf-schema#label> "likeliness" .
+# 
+# http://www.lseid.org/ns/lseid#method
+<http://www.lseid.org/ns/lseid#method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#method> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#DataSource> .
+<http://www.lseid.org/ns/lseid#method> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#method> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies which method was used to collect the data" .
+<http://www.lseid.org/ns/lseid#method> <http://www.w3.org/2000/01/rdf-schema#label> "method" .
+# 
+# http://www.lseid.org/ns/lseid#nameOfAuthority
+<http://www.lseid.org/ns/lseid#nameOfAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#nameOfAuthority> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Authority> .
+<http://www.lseid.org/ns/lseid#nameOfAuthority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#nameOfAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the corresponding authority" .
+<http://www.lseid.org/ns/lseid#nameOfAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "nameOfAuthority" .
+# 
+# http://www.lseid.org/ns/lseid#nameOfStakeholder
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Stakeholder> .
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the stakeholder" .
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "nameOfStakeholder" .
+# 
+# http://www.lseid.org/ns/lseid#outcomeDescription
+<http://www.lseid.org/ns/lseid#outcomeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#outcomeDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Outcome> .
+<http://www.lseid.org/ns/lseid#outcomeDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.lseid.org/ns/lseid#outcomeDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed description of the outcome" .
+<http://www.lseid.org/ns/lseid#outcomeDescription> <http://www.w3.org/2000/01/rdf-schema#label> "outcomeDescription" .
+# 
+# http://www.lseid.org/ns/lseid#purposeOfCollectingData
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the reason for the data collection" .
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> <http://www.w3.org/2000/01/rdf-schema#label> "purposeOfCollectingData" .
+# 
+# http://www.lseid.org/ns/lseid#reviewFrequency
+<http://www.lseid.org/ns/lseid#reviewFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#reviewFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#reviewFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#reviewFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to describe how frequently an assessment is being reviewed" .
+<http://www.lseid.org/ns/lseid#reviewFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "reviewFrequency" .
+# 
+# http://www.lseid.org/ns/lseid#size
+<http://www.lseid.org/ns/lseid#size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.lseid.org/ns/lseid#size> <http://www.w3.org/2000/01/rdf-schema#comment> "Size of data in MB" .
+<http://www.lseid.org/ns/lseid#size> <http://www.w3.org/2000/01/rdf-schema#label> "size" .
+# 
+# http://www.lseid.org/ns/lseid#typeOfAssessment
+<http://www.lseid.org/ns/lseid#typeOfAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#typeOfAssessment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Assessment> .
+<http://www.lseid.org/ns/lseid#typeOfAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#typeOfAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of assessment type (i.e. DPIA, Ethical Assessment, etc.)" .
+<http://www.lseid.org/ns/lseid#typeOfAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfAssessment" .
+# 
+# http://www.lseid.org/ns/lseid#typeOfBias
+<http://www.lseid.org/ns/lseid#typeOfBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#typeOfBias> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Bias> .
+<http://www.lseid.org/ns/lseid#typeOfBias> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#typeOfBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the type of the bias (i.e. unbalanced data)" .
+<http://www.lseid.org/ns/lseid#typeOfBias> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfBias" .
+# 
+# http://www.lseid.org/ns/lseid#typeOfData
+<http://www.lseid.org/ns/lseid#typeOfData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#typeOfData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.lseid.org/ns/lseid#Data> .
+<http://www.lseid.org/ns/lseid#typeOfData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#typeOfData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the data" .
+<http://www.lseid.org/ns/lseid#typeOfData> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfData" .
+# 
+# http://www.lseid.org/ns/lseid#typeOfDataSubject
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dpv#DataSubject> .
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies who the data subject is (i.e. adult, child, etc.)" .
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfDataSubject" .
+# 
+# http://www.w3.org/2002/07/owl#topDataProperty
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.lseid.org/ns/lseid#Assessment
+<http://www.lseid.org/ns/lseid#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A judgement about something. It usually analyses the  potential impact and risks" .
+<http://www.lseid.org/ns/lseid#Assessment> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment" .
+# 
+# http://www.lseid.org/ns/lseid#Authority
+<http://www.lseid.org/ns/lseid#Authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Authority> <http://www.w3.org/2000/01/rdf-schema#comment> "An official institution" .
+<http://www.lseid.org/ns/lseid#Authority> <http://www.w3.org/2000/01/rdf-schema#label> "Authority" .
+# 
+# http://www.lseid.org/ns/lseid#Bias
+<http://www.lseid.org/ns/lseid#Bias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Bias> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that is not equally representative for every affected group" .
+<http://www.lseid.org/ns/lseid#Bias> <http://www.w3.org/2000/01/rdf-schema#label> "Bias" .
+# 
+# http://www.lseid.org/ns/lseid#Data
+<http://www.lseid.org/ns/lseid#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information. A collection of Data forms a Dataset" .
+<http://www.lseid.org/ns/lseid#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# 
+# http://www.lseid.org/ns/lseid#DataSource
+<http://www.lseid.org/ns/lseid#DataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#DataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies where data comes from" .
+<http://www.lseid.org/ns/lseid#DataSource> <http://www.w3.org/2000/01/rdf-schema#label> "DataSource" .
+# 
+# http://www.lseid.org/ns/lseid#DiscouragedPurpose
+<http://www.lseid.org/ns/lseid#DiscouragedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#DiscouragedPurpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dpv#Purpose> .
+<http://www.lseid.org/ns/lseid#DiscouragedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Discouraged purpose defines a data application that is considered to be risky, not ethical or problematic in any other form" .
+<http://www.lseid.org/ns/lseid#DiscouragedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "DiscouragedPurpose" .
+# 
+# http://www.lseid.org/ns/lseid#Evaluation
+<http://www.lseid.org/ns/lseid#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome or response to a request" .
+<http://www.lseid.org/ns/lseid#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
+# 
+# http://www.lseid.org/ns/lseid#Group
+<http://www.lseid.org/ns/lseid#Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Various people that share a common characterstic" .
+<http://www.lseid.org/ns/lseid#Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group" .
+# 
+# http://www.lseid.org/ns/lseid#Guideline
+<http://www.lseid.org/ns/lseid#Guideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Guideline> <http://www.w3.org/2000/01/rdf-schema#comment> "A common standard or step by step guide" .
+<http://www.lseid.org/ns/lseid#Guideline> <http://www.w3.org/2000/01/rdf-schema#label> "Guideline" .
+# 
+# http://www.lseid.org/ns/lseid#InitialPurpose
+<http://www.lseid.org/ns/lseid#InitialPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#InitialPurpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dpv#Purpose> .
+<http://www.lseid.org/ns/lseid#InitialPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "The main purpose. This is the initial idea on how and why to process the data" .
+<http://www.lseid.org/ns/lseid#InitialPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "InitialPurpose" .
+# 
+# http://www.lseid.org/ns/lseid#Measure
+<http://www.lseid.org/ns/lseid#Measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Measure> <http://www.w3.org/2000/01/rdf-schema#comment> "This entity is used to indicate an action that has been taken to achieve a specific goal (the sub-classes of this class specify the type of action that has been taken)" .
+<http://www.lseid.org/ns/lseid#Measure> <http://www.w3.org/2000/01/rdf-schema#label> "Measure" .
+# 
+# http://www.lseid.org/ns/lseid#OrganizationalStakeholder
+<http://www.lseid.org/ns/lseid#OrganizationalStakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#OrganizationalStakeholder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#Stakeholder> .
+<http://www.lseid.org/ns/lseid#OrganizationalStakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "Stakeholder that can be considered as an organized entity or institution" .
+<http://www.lseid.org/ns/lseid#OrganizationalStakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "OrganizationalStakeholder" .
+# 
+# http://www.lseid.org/ns/lseid#OtherPurpose
+<http://www.lseid.org/ns/lseid#OtherPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#OtherPurpose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dpv#Purpose> .
+<http://www.lseid.org/ns/lseid#OtherPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for any purpose that is neither considered to be the inital purpose nor a discouraged purpose" .
+<http://www.lseid.org/ns/lseid#OtherPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "OtherPurpose" .
+# 
+# http://www.lseid.org/ns/lseid#Outcome
+<http://www.lseid.org/ns/lseid#Outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The result produced by a guideline" .
+<http://www.lseid.org/ns/lseid#Outcome> <http://www.w3.org/2000/01/rdf-schema#label> "Outcome" .
+# 
+# http://www.lseid.org/ns/lseid#RiskMitigationMeasure
+<http://www.lseid.org/ns/lseid#RiskMitigationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#RiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#Measure> .
+<http://www.lseid.org/ns/lseid#RiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to indicate the measure that has been taken to mitigate a risk" .
+<http://www.lseid.org/ns/lseid#RiskMitigationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "RiskMitigationMeasure" .
+# 
+# http://www.lseid.org/ns/lseid#SecurityMeasure
+<http://www.lseid.org/ns/lseid#SecurityMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#SecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#Measure> .
+<http://www.lseid.org/ns/lseid#SecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to indicate a measure that has been taken to prevent the misuse of data" .
+<http://www.lseid.org/ns/lseid#SecurityMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "SecurityMeasure" .
+# 
+# http://www.lseid.org/ns/lseid#Stakeholder
+<http://www.lseid.org/ns/lseid#Stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.lseid.org/ns/lseid#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (or authority) of interest" .
+<http://www.lseid.org/ns/lseid#Stakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "Stakeholder" .
+# 
+# http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of data, published or curated by a single source, and available for access or download in one or more representations."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som er til råde for adgang til eller download af i en eller flere repræsentationer."@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech."@cs .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/vocab-dcat/> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Conjunto de datos"@es .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Datasæt"@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Datová sada"@cs .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Jeu de données"@fr .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Σύνολο Δεδομένων"@el .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "قائمة بيانات"@ar .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "データセット"@ja .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#altLabel> "Datasamling"@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - odstraněno tvrzení o podtřídě dctype:Dataset, jelikož rozsah dcat:Dataset zahrnuje několik dalších typů ze slovníku dctype."@cs .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - se eliminó el axioma de subclase con dctype:Dataset porque el alcance de dcat:Dataset incluye muchos otros tipos del vocabulario dctype."@es .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - sottoclasse di dctype:Dataset rimosso perché l'ambito di dcat:Dataset include diversi altri tipi dal vocabolario dctype."@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - subklasse af dctype:Dataset fjernet da scope af dcat:Dataset omfatter flere forskellige typer fra dctype-vokabularet."@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "En samling a data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som der er adgang til i en eller flere repræsentationer."@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech."@cs .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#editorialNote> "2020-03-16 A new scopenote added and need to be translated"@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Cette classe représente le jeu de données publié par le fournisseur de données. Dans les cas où une distinction est nécessaire entre le jeu de donénes et son entrée dans le catalogue, la classe registre de données peut être utilisée pour ce dernier."@fr .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Denne klasse beskriver det konceptuelle datasæt. En eller flere repræsentationer kan være tilgængelige med forskellige skematiske opsætninger, formater eller serialiseringer."@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Denne klasse repræsenterer det konkrete datasæt som det udgives af datasætleverandøren. I de tilfælde hvor det er nødvendigt at skelne mellem det konkrete datasæt og dets registrering i kataloget (fordi metadata såsom ændringsdato og vedligeholder er forskellige), så kan klassen katalogpost anvendes. "@da .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Esta clase representa el conjunto de datos publicados. En los casos donde es necesario distinguir entre el conjunto de datos y su entrada en el catálogo de datos, se debe utilizar la clase 'registro del catálogo'."@es .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Questa classe descrive il dataset dal punto di vista concettuale. Possono essere disponibili una o più rappresentazioni, con diversi layout e formati schematici o serializzazioni."@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Questa classe rappresenta il dataset come pubblicato dall’editore. Nel caso in cui sia necessario operare  una distinzione fra i metadati originali del dataset e il record dei metadati ad esso associato nel catalogo (ad esempio, per distinguere la data di modifica del dataset da quella del dataset nel catalogo) si può impiegare la classe catalog record."@it .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Tato třída reprezentuje datovou sadu tak, jak je publikována poskytovatelem dat. V případě potřeby rozlišení datové sady a jejího katalogizačního záznamu (jelikož metadata jako datum modifikace se mohou lišit) pro něj může být použita třída \"katalogizační záznam\"."@cs .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities. Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter."@en .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "Η κλάση αυτή αναπαριστά το σύνολο δεδομένων αυτό καθ'εαυτό, όπως έχει δημοσιευθεί από τον εκδότη. Σε περιπτώσεις όπου είναι απαραίτητος ο διαχωρισμός μεταξύ του συνόλου δεδομένων και της καταγραφής αυτού στον κατάλογο (γιατί μεταδεδομένα όπως η ημερομηνία αλλαγής και ο συντηρητής μπορεί να διαφέρουν) η κλάση της καταγραφής καταλόγου μπορεί να χρησιμοποιηθεί για το τελευταίο."@el .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#scopeNote> "このクラスは、データセットの公開者が公開する実際のデータセットを表わします。カタログ内の実際のデータセットとそのエントリーとの区別が必要な場合（修正日と維持者などのメタデータが異なるかもしれないので）は、後者にcatalog recordというクラスを使用できます。"@ja .
+# 
+# http://www.w3.org/ns/dpv#DataController
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> .
+<http://www.w3.org/ns/dpv#DataController> <http://purl.org/dc/terms/created> "2019-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#DataController> <http://purl.org/dc/terms/creator> "Axel Polleres" .
+<http://www.w3.org/ns/dpv#DataController> <http://purl.org/dc/terms/creator> "Javier Ferenandez" .
+<http://www.w3.org/ns/dpv#DataController> <http://purl.org/dc/terms/description> "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en .
+<http://www.w3.org/ns/dpv#DataController> <http://purl.org/dc/terms/modified> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/2000/01/rdf-schema#comment> "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en .
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> .
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/2000/01/rdf-schema#label> "Data Controller"@en .
+<http://www.w3.org/ns/dpv#DataController> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#DataProtectionOfficer
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://purl.org/dc/terms/created> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://purl.org/dc/terms/creator> "Georg Krog" .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://purl.org/dc/terms/creator> "Paul Ryan" .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://purl.org/dc/terms/description> "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on your data protection obligations and act as a contact point for data subjects and the supervisory authority."@en .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://www.w3.org/2000/01/rdf-schema#label> "Data Protection Officer"@en .
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#DataSubject
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lseid.org/ns/lseid#Stakeholder> .
+<http://www.w3.org/ns/dpv#DataSubject> <http://purl.org/dc/terms/created> "2019-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#DataSubject> <http://purl.org/dc/terms/creator> "Axel Polleres" .
+<http://www.w3.org/ns/dpv#DataSubject> <http://purl.org/dc/terms/creator> "Javier Ferenandez" .
+<http://www.w3.org/ns/dpv#DataSubject> <http://purl.org/dc/terms/description> "The individual (or category of individuals) whose personal data is being processed"@en .
+<http://www.w3.org/ns/dpv#DataSubject> <http://purl.org/dc/terms/modified> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en .
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> .
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject"@en .
+<http://www.w3.org/ns/dpv#DataSubject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#LegalBasis
+<http://www.w3.org/ns/dpv#LegalBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://purl.org/dc/terms/created> "2019-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://purl.org/dc/terms/description> "The Legal basis used to justify processing of personal data"@en .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://purl.org/dc/terms/modified> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://www.w3.org/2000/01/rdf-schema#label> "Legal Basis"@en .
+<http://www.w3.org/ns/dpv#LegalBasis> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#Processing
+<http://www.w3.org/ns/dpv#Processing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#Processing> <http://purl.org/dc/terms/created> "2019-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#Processing> <http://purl.org/dc/terms/creator> "Axel Polleres" .
+<http://www.w3.org/ns/dpv#Processing> <http://purl.org/dc/terms/creator> "Javier Ferenandez" .
+<http://www.w3.org/ns/dpv#Processing> <http://purl.org/dc/terms/description> "The processing performed on personal data"@en .
+<http://www.w3.org/ns/dpv#Processing> <http://purl.org/dc/terms/modified> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#Processing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.specialprivacy.eu/> .
+<http://www.w3.org/ns/dpv#Processing> <http://www.w3.org/2000/01/rdf-schema#label> "Processing"@en .
+<http://www.w3.org/ns/dpv#Processing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.specialprivacy.eu/langs/usage-policy#AnyProcessing> .
+<http://www.w3.org/ns/dpv#Processing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#Purpose
+<http://www.w3.org/ns/dpv#Purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#Purpose> <http://purl.org/dc/terms/created> "2019-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#Purpose> <http://purl.org/dc/terms/creator> "Axel Polleres" .
+<http://www.w3.org/ns/dpv#Purpose> <http://purl.org/dc/terms/creator> "Javier Ferenandez" .
+<http://www.w3.org/ns/dpv#Purpose> <http://purl.org/dc/terms/description> "The purpose of processing personal data"@en .
+<http://www.w3.org/ns/dpv#Purpose> <http://purl.org/dc/terms/modified> "2020-11-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#Purpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.specialprivacy.eu/> .
+<http://www.w3.org/ns/dpv#Purpose> <http://www.w3.org/2000/01/rdf-schema#label> "Purpose"@en .
+<http://www.w3.org/ns/dpv#Purpose> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.specialprivacy.eu/langs/usage-policy#AnyPurpose> .
+<http://www.w3.org/ns/dpv#Purpose> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dpv#Risk
+<http://www.w3.org/ns/dpv#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dpv#Risk> <http://purl.org/dc/terms/created> "2020-11-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/dpv#Risk> <http://purl.org/dc/terms/creator> "Harshvardhan J. Pandit" .
+<http://www.w3.org/ns/dpv#Risk> <http://purl.org/dc/terms/description> "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en .
+<http://www.w3.org/ns/dpv#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en .
+<http://www.w3.org/ns/dpv#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
+<http://www.w3.org/ns/dpv#Risk> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+# 
+# http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+# 
+# http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://purl.org/vocab/vann/usageNote> "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Measurement"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

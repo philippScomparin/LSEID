@@ -1,0 +1,754 @@
+@prefix : <http://www.semanticweb.org/phili/ontologies/2021/4/untitled-ontology-7#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/phili/ontologies/2021/4/untitled-ontology-7> .
+
+<http://www.semanticweb.org/phili/ontologies/2021/4/untitled-ontology-7> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/usageNote
+<http://purl.org/vocab/vann/usageNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.lseid.org/ns/lseid#affectsGroup
+<http://www.lseid.org/ns/lseid#affectsGroup> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/dpv#Purpose> ;
+                                             rdfs:range <http://www.lseid.org/ns/lseid#Group> ;
+                                             rdfs:comment "Indicates which groups are affected by the Purpose of the data processing" ;
+                                             rdfs:label "affectsGroup" .
+
+
+###  http://www.lseid.org/ns/lseid#conductsAssessment
+<http://www.lseid.org/ns/lseid#conductsAssessment> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> ;
+                                                   rdfs:range <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                   rdfs:comment "Used to describe the execution of an Assessment by an organizational Stakeholder" ;
+                                                   rdfs:label "conductsAssessment" .
+
+
+###  http://www.lseid.org/ns/lseid#consultsWith
+<http://www.lseid.org/ns/lseid#consultsWith> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/dpv#DataController> ;
+                                             rdfs:range <http://www.lseid.org/ns/lseid#Authority> ;
+                                             rdfs:comment "Indicates that Data Controller consults with an Authority over a dataset and it's possible processing applications" ;
+                                             rdfs:label "consultsWith" .
+
+
+###  http://www.lseid.org/ns/lseid#containsBias
+<http://www.lseid.org/ns/lseid#containsBias> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                             rdfs:range <http://www.lseid.org/ns/lseid#Bias> ;
+                                             rdfs:comment "Indicates what kind of Bias a dataset contains" ;
+                                             rdfs:label "containsBias" .
+
+
+###  http://www.lseid.org/ns/lseid#containsData
+<http://www.lseid.org/ns/lseid#containsData> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                             rdfs:range <http://www.lseid.org/ns/lseid#Data> ;
+                                             rdfs:comment "Indicates the content of the dataset" ;
+                                             rdfs:label "containsData" .
+
+
+###  http://www.lseid.org/ns/lseid#followsGuideline
+<http://www.lseid.org/ns/lseid#followsGuideline> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                 rdfs:range <http://www.lseid.org/ns/lseid#Guideline> ;
+                                                 rdfs:comment "Indicates what Guideline was used for carrying out an Assessment" ;
+                                                 rdfs:label "followsGuideline" .
+
+
+###  http://www.lseid.org/ns/lseid#hasDataController
+<http://www.lseid.org/ns/lseid#hasDataController> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                                  rdfs:range <http://www.w3.org/ns/dpv#DataController> ;
+                                                  rdfs:comment "Indicates the Data Controller of the Data" ;
+                                                  rdfs:label "hasDataController" .
+
+
+###  http://www.lseid.org/ns/lseid#hasDataSource
+<http://www.lseid.org/ns/lseid#hasDataSource> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                              rdfs:range <http://www.lseid.org/ns/lseid#DataSource> ;
+                                              rdfs:comment "Indicates where Data was taken from" ;
+                                              rdfs:label "hasDataSource" .
+
+
+###  http://www.lseid.org/ns/lseid#hasDataSubject
+<http://www.lseid.org/ns/lseid#hasDataSubject> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                               rdfs:range <http://www.w3.org/ns/dpv#DataSubject> ;
+                                               rdfs:comment "Indicates who the Data Subjects are" ;
+                                               rdfs:label "hasDataSubject" .
+
+
+###  http://www.lseid.org/ns/lseid#hasLegalBasis
+<http://www.lseid.org/ns/lseid#hasLegalBasis> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.w3.org/ns/dpv#Processing> ;
+                                              rdfs:range <http://www.w3.org/ns/dpv#LegalBasis> ;
+                                              rdfs:comment "Indicates the legal basis for data processing" ;
+                                              rdfs:label "hasLegalBasis" .
+
+
+###  http://www.lseid.org/ns/lseid#hasPurpose
+<http://www.lseid.org/ns/lseid#hasPurpose> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/dpv#Processing> ;
+                                           rdfs:range <http://www.w3.org/ns/dpv#Purpose> ;
+                                           rdfs:comment "Used to define the purpose of the data processing" ;
+                                           rdfs:label "hasPurpose" .
+
+
+###  http://www.lseid.org/ns/lseid#hasRisk
+<http://www.lseid.org/ns/lseid#hasRisk> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.w3.org/ns/dpv#Processing> ;
+                                        rdfs:range <http://www.w3.org/ns/dpv#Risk> ;
+                                        rdfs:comment "Indicates the risks of processing the data" ;
+                                        rdfs:label "hasRisk" .
+
+
+###  http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure
+<http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                                         rdfs:range <http://www.lseid.org/ns/lseid#RiskMitigationMeasure> ;
+                                                         rdfs:comment "This property is used to indicate which mitigation measure has been taken" ;
+                                                         rdfs:label "hasRiskMitigationMeasure" .
+
+
+###  http://www.lseid.org/ns/lseid#hasSecurityMeasure
+<http://www.lseid.org/ns/lseid#hasSecurityMeasure> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                                   rdfs:range <http://www.lseid.org/ns/lseid#SecurityMeasure> ;
+                                                   rdfs:comment "Indicates the security measure taken to prevent unoconvenient events" ;
+                                                   rdfs:label "hasSecurityMeasure" .
+
+
+###  http://www.lseid.org/ns/lseid#involvedIn
+<http://www.lseid.org/ns/lseid#involvedIn> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                           rdfs:range <http://www.w3.org/ns/dpv#Processing> ;
+                                           rdfs:comment "Used to indicate the data involved in the data processing" ;
+                                           rdfs:label "involvedIn" .
+
+
+###  http://www.lseid.org/ns/lseid#isAbout
+<http://www.lseid.org/ns/lseid#isAbout> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.lseid.org/ns/lseid#Evaluation> ;
+                                        rdfs:range <http://www.w3.org/ns/dpv#Processing> ;
+                                        rdfs:comment "Indicates the data processing that was evaluated" ;
+                                        rdfs:label "isAbout" .
+
+
+###  http://www.lseid.org/ns/lseid#isAboutProcessing
+<http://www.lseid.org/ns/lseid#isAboutProcessing> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                  rdfs:range <http://www.w3.org/ns/dpv#Processing> ;
+                                                  rdfs:comment "Used to describe the data processing that the assessment is targeting" ;
+                                                  rdfs:label "isAboutProcessing" .
+
+
+###  http://www.lseid.org/ns/lseid#isAssociatedWith
+<http://www.lseid.org/ns/lseid#isAssociatedWith> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                                 rdfs:range <http://www.w3.org/ns/dcat#Dataset> ;
+                                                 rdfs:comment "This property is used to indicate the dataset with which the risk is associated with" ;
+                                                 rdfs:label "isAssociatedWith" .
+
+
+###  http://www.lseid.org/ns/lseid#producesEvaluation
+<http://www.lseid.org/ns/lseid#producesEvaluation> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.lseid.org/ns/lseid#Authority> ;
+                                                   rdfs:range <http://www.lseid.org/ns/lseid#Evaluation> ;
+                                                   rdfs:comment "Indicates the result of a consultation of an authority with a data controller" ;
+                                                   rdfs:label "producesEvaluation" .
+
+
+###  http://www.lseid.org/ns/lseid#producesOutcome
+<http://www.lseid.org/ns/lseid#producesOutcome> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                rdfs:range <http://www.lseid.org/ns/lseid#Outcome> ;
+                                                rdfs:comment "Used to describe the outcome of an assessment" ;
+                                                rdfs:label "producesOutcome" .
+
+
+###  https://www.w3.org/ns/dqv#hasQualityMeasurement
+<https://www.w3.org/ns/dqv#hasQualityMeasurement> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                                  rdfs:range <http://www.w3.org/ns/dqv#QualityMeasurement> .
+
+
+###  https://www.w3.org/ns/dqv#isMeasurementOf
+<https://www.w3.org/ns/dqv#isMeasurementOf> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                            rdfs:domain <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+                                            rdfs:range <http://www.w3.org/ns/dqv#Metric> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.lseid.org/ns/lseid#authorOfDataCollection
+<http://www.lseid.org/ns/lseid#authorOfDataCollection> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <http://www.lseid.org/ns/lseid#DataSource> ;
+                                                       rdfs:range rdfs:Literal ;
+                                                       rdfs:comment "Used to indicate the responsible person or organization of the data collection" ;
+                                                       rdfs:label "authorOfDataCollection" .
+
+
+###  http://www.lseid.org/ns/lseid#authorOfGuideline
+<http://www.lseid.org/ns/lseid#authorOfGuideline> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.lseid.org/ns/lseid#Guideline> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "The author of the guideline" ;
+                                                  rdfs:label "authorOfGuideline" .
+
+
+###  http://www.lseid.org/ns/lseid#dateOfGuideline
+<http://www.lseid.org/ns/lseid#dateOfGuideline> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.lseid.org/ns/lseid#Guideline> ;
+                                                rdfs:range xsd:date ;
+                                                rdfs:comment "The publication date of the guideline" ;
+                                                rdfs:label "dateOfGuideline" .
+
+
+###  http://www.lseid.org/ns/lseid#dateOfOutcome
+<http://www.lseid.org/ns/lseid#dateOfOutcome> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.lseid.org/ns/lseid#Outcome> ;
+                                              rdfs:range xsd:byte ;
+                                              rdfs:comment "The date when the outcome was produced" ;
+                                              rdfs:label "dateOfOutcome" .
+
+
+###  http://www.lseid.org/ns/lseid#descriptionOfBias
+<http://www.lseid.org/ns/lseid#descriptionOfBias> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.lseid.org/ns/lseid#Bias> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "Detailed description of the bias (i.e. 85% male data vs 15% female data)" ;
+                                                  rdfs:label "descriptionOfBias" .
+
+
+###  http://www.lseid.org/ns/lseid#descriptionOfDataApplication
+<http://www.lseid.org/ns/lseid#descriptionOfDataApplication> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.w3.org/ns/dpv#Processing> ;
+                                                             rdfs:range rdfs:Literal ;
+                                                             rdfs:comment "Detailed description of the specific usage of the data" ;
+                                                             rdfs:label "descriptionOfDataApplication" .
+
+
+###  http://www.lseid.org/ns/lseid#descriptionOfGroup
+<http://www.lseid.org/ns/lseid#descriptionOfGroup> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.lseid.org/ns/lseid#Group> ;
+                                                   rdfs:range rdfs:Literal ;
+                                                   rdfs:comment "Description of the group (i.e. composition of the group)" ;
+                                                   rdfs:label "descriptionOfGroup" .
+
+
+###  http://www.lseid.org/ns/lseid#descriptionOfMeasure
+<http://www.lseid.org/ns/lseid#descriptionOfMeasure> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://www.lseid.org/ns/lseid#SecurityMeasure> ;
+                                                     rdfs:range rdfs:Literal ;
+                                                     rdfs:comment "Detailed description of the taken measure" ;
+                                                     rdfs:label "descriptionOfMeasure" .
+
+
+###  http://www.lseid.org/ns/lseid#descriptionOfRisk
+<http://www.lseid.org/ns/lseid#descriptionOfRisk> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "Detailed description of the risk" ;
+                                                  rdfs:label "descriptionOfRisk" .
+
+
+###  http://www.lseid.org/ns/lseid#evaluationDate
+<http://www.lseid.org/ns/lseid#evaluationDate> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.lseid.org/ns/lseid#Evaluation> ;
+                                               rdfs:range xsd:date ;
+                                               rdfs:comment "The date of the evaluation" ;
+                                               rdfs:label "evaluationDate" .
+
+
+###  http://www.lseid.org/ns/lseid#evaluationText
+<http://www.lseid.org/ns/lseid#evaluationText> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.lseid.org/ns/lseid#Evaluation> ;
+                                               rdfs:range rdfs:Literal ;
+                                               rdfs:comment "The content of an evaluation" ;
+                                               rdfs:label "evaluationText" .
+
+
+###  http://www.lseid.org/ns/lseid#impact
+<http://www.lseid.org/ns/lseid#impact> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:comment "Description of the impact" ;
+                                       rdfs:label "impact" .
+
+
+###  http://www.lseid.org/ns/lseid#initialDate
+<http://www.lseid.org/ns/lseid#initialDate> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.lseid.org/ns/lseid#DataSource> ;
+                                            rdfs:range xsd:dateTime ;
+                                            rdfs:comment "Specifies when the data collection started" ;
+                                            rdfs:label "initialDate" .
+
+
+###  http://www.lseid.org/ns/lseid#isPersonalData
+<http://www.lseid.org/ns/lseid#isPersonalData> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                               rdfs:range xsd:boolean ;
+                                               rdfs:comment "Specifies whether the data contains personal data" ;
+                                               rdfs:label "isPersonalData" .
+
+
+###  http://www.lseid.org/ns/lseid#isSensitiveData
+<http://www.lseid.org/ns/lseid#isSensitiveData> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                                rdfs:range xsd:boolean ;
+                                                rdfs:comment "Specifies whether the data contains sensitive data" ;
+                                                rdfs:label "isSensitiveData" .
+
+
+###  http://www.lseid.org/ns/lseid#isVulnerable
+<http://www.lseid.org/ns/lseid#isVulnerable> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/dpv#DataSubject> ;
+                                             rdfs:range xsd:boolean ;
+                                             rdfs:comment "Specifies whether the data subject is vulnerable" ;
+                                             rdfs:label "isVulnerable" .
+
+
+###  http://www.lseid.org/ns/lseid#lastDate
+<http://www.lseid.org/ns/lseid#lastDate> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.lseid.org/ns/lseid#DataSource> ;
+                                         rdfs:range xsd:dateTime ;
+                                         rdfs:comment "Specifies when the data collection ended" ;
+                                         rdfs:label "lastDate" .
+
+
+###  http://www.lseid.org/ns/lseid#levelOfImpact
+<http://www.lseid.org/ns/lseid#levelOfImpact> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                              rdfs:range rdfs:Literal ;
+                                              rdfs:comment "Description of the level of the impact (i.e. high, low)" ;
+                                              rdfs:label "levelOfImpact" .
+
+
+###  http://www.lseid.org/ns/lseid#likeliness
+<http://www.lseid.org/ns/lseid#likeliness> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/dpv#Risk> ;
+                                           rdfs:range rdfs:Literal ;
+                                           rdfs:comment "Description of how probable the event is going to happen" ;
+                                           rdfs:label "likeliness" .
+
+
+###  http://www.lseid.org/ns/lseid#method
+<http://www.lseid.org/ns/lseid#method> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://www.lseid.org/ns/lseid#DataSource> ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:comment "Specifies which method was used to collect the data" ;
+                                       rdfs:label "method" .
+
+
+###  http://www.lseid.org/ns/lseid#nameOfAuthority
+<http://www.lseid.org/ns/lseid#nameOfAuthority> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.lseid.org/ns/lseid#Authority> ;
+                                                rdfs:range rdfs:Literal ;
+                                                rdfs:comment "The name of the corresponding authority" ;
+                                                rdfs:label "nameOfAuthority" .
+
+
+###  http://www.lseid.org/ns/lseid#nameOfStakeholder
+<http://www.lseid.org/ns/lseid#nameOfStakeholder> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.lseid.org/ns/lseid#Stakeholder> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "The name of the stakeholder" ;
+                                                  rdfs:label "nameOfStakeholder" .
+
+
+###  http://www.lseid.org/ns/lseid#outcomeDescription
+<http://www.lseid.org/ns/lseid#outcomeDescription> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://www.lseid.org/ns/lseid#Outcome> ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:comment "Detailed description of the outcome" ;
+                                                   rdfs:label "outcomeDescription" .
+
+
+###  http://www.lseid.org/ns/lseid#purposeOfCollectingData
+<http://www.lseid.org/ns/lseid#purposeOfCollectingData> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                                        rdfs:range rdfs:Literal ;
+                                                        rdfs:comment "Describes the reason for the data collection" ;
+                                                        rdfs:label "purposeOfCollectingData" .
+
+
+###  http://www.lseid.org/ns/lseid#reviewFrequency
+<http://www.lseid.org/ns/lseid#reviewFrequency> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                rdfs:range rdfs:Literal ;
+                                                rdfs:comment "Used to describe how frequently an assessment is being reviewed" ;
+                                                rdfs:label "reviewFrequency" .
+
+
+###  http://www.lseid.org/ns/lseid#size
+<http://www.lseid.org/ns/lseid#size> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                     rdfs:range xsd:double ;
+                                     rdfs:comment "Size of data in MB" ;
+                                     rdfs:label "size" .
+
+
+###  http://www.lseid.org/ns/lseid#typeOfAssessment
+<http://www.lseid.org/ns/lseid#typeOfAssessment> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://www.lseid.org/ns/lseid#Assessment> ;
+                                                 rdfs:range rdfs:Literal ;
+                                                 rdfs:comment "Description of assessment type (i.e. DPIA, Ethical Assessment, etc.)" ;
+                                                 rdfs:label "typeOfAssessment" .
+
+
+###  http://www.lseid.org/ns/lseid#typeOfBias
+<http://www.lseid.org/ns/lseid#typeOfBias> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.lseid.org/ns/lseid#Bias> ;
+                                           rdfs:range rdfs:Literal ;
+                                           rdfs:comment "Description of the type of the bias (i.e. unbalanced data)" ;
+                                           rdfs:label "typeOfBias" .
+
+
+###  http://www.lseid.org/ns/lseid#typeOfData
+<http://www.lseid.org/ns/lseid#typeOfData> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <http://www.lseid.org/ns/lseid#Data> ;
+                                           rdfs:range rdfs:Literal ;
+                                           rdfs:comment "Description of the data" ;
+                                           rdfs:label "typeOfData" .
+
+
+###  http://www.lseid.org/ns/lseid#typeOfDataSubject
+<http://www.lseid.org/ns/lseid#typeOfDataSubject> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.w3.org/ns/dpv#DataSubject> ;
+                                                  rdfs:range rdfs:Literal ;
+                                                  rdfs:comment "Specifies who the data subject is (i.e. adult, child, etc.)" ;
+                                                  rdfs:label "typeOfDataSubject" .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.lseid.org/ns/lseid#Assessment
+<http://www.lseid.org/ns/lseid#Assessment> rdf:type owl:Class ;
+                                           rdfs:comment "A judgement about something. It usually analyses the  potential impact and risks" ;
+                                           rdfs:label "Assessment" .
+
+
+###  http://www.lseid.org/ns/lseid#Authority
+<http://www.lseid.org/ns/lseid#Authority> rdf:type owl:Class ;
+                                          rdfs:comment "An official institution" ;
+                                          rdfs:label "Authority" .
+
+
+###  http://www.lseid.org/ns/lseid#Bias
+<http://www.lseid.org/ns/lseid#Bias> rdf:type owl:Class ;
+                                     rdfs:comment "Something that is not equally representative for every affected group" ;
+                                     rdfs:label "Bias" .
+
+
+###  http://www.lseid.org/ns/lseid#Data
+<http://www.lseid.org/ns/lseid#Data> rdf:type owl:Class ;
+                                     rdfs:comment "A piece of information. A collection of Data forms a Dataset" ;
+                                     rdfs:label "Data" .
+
+
+###  http://www.lseid.org/ns/lseid#DataSource
+<http://www.lseid.org/ns/lseid#DataSource> rdf:type owl:Class ;
+                                           rdfs:comment "Specifies where data comes from" ;
+                                           rdfs:label "DataSource" .
+
+
+###  http://www.lseid.org/ns/lseid#DiscouragedPurpose
+<http://www.lseid.org/ns/lseid#DiscouragedPurpose> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.w3.org/ns/dpv#Purpose> ;
+                                                   rdfs:comment "Discouraged purpose defines a data application that is considered to be risky, not ethical or problematic in any other form" ;
+                                                   rdfs:label "DiscouragedPurpose" .
+
+
+###  http://www.lseid.org/ns/lseid#Evaluation
+<http://www.lseid.org/ns/lseid#Evaluation> rdf:type owl:Class ;
+                                           rdfs:comment "The outcome or response to a request" ;
+                                           rdfs:label "Evaluation" .
+
+
+###  http://www.lseid.org/ns/lseid#Group
+<http://www.lseid.org/ns/lseid#Group> rdf:type owl:Class ;
+                                      rdfs:comment "Various people that share a common characterstic" ;
+                                      rdfs:label "Group" .
+
+
+###  http://www.lseid.org/ns/lseid#Guideline
+<http://www.lseid.org/ns/lseid#Guideline> rdf:type owl:Class ;
+                                          rdfs:comment "A common standard or step by step guide" ;
+                                          rdfs:label "Guideline" .
+
+
+###  http://www.lseid.org/ns/lseid#InitialPurpose
+<http://www.lseid.org/ns/lseid#InitialPurpose> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.w3.org/ns/dpv#Purpose> ;
+                                               rdfs:comment "The main purpose. This is the initial idea on how and why to process the data" ;
+                                               rdfs:label "InitialPurpose" .
+
+
+###  http://www.lseid.org/ns/lseid#Measure
+<http://www.lseid.org/ns/lseid#Measure> rdf:type owl:Class ;
+                                        rdfs:comment "This entity is used to indicate an action that has been taken to achieve a specific goal (the sub-classes of this class specify the type of action that has been taken)" ;
+                                        rdfs:label "Measure" .
+
+
+###  http://www.lseid.org/ns/lseid#OrganizationalStakeholder
+<http://www.lseid.org/ns/lseid#OrganizationalStakeholder> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.lseid.org/ns/lseid#Stakeholder> ;
+                                                          rdfs:comment "Stakeholder that can be considered as an organized entity or institution" ;
+                                                          rdfs:label "OrganizationalStakeholder" .
+
+
+###  http://www.lseid.org/ns/lseid#OtherPurpose
+<http://www.lseid.org/ns/lseid#OtherPurpose> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://www.w3.org/ns/dpv#Purpose> ;
+                                             rdfs:comment "Used for any purpose that is neither considered to be the inital purpose nor a discouraged purpose" ;
+                                             rdfs:label "OtherPurpose" .
+
+
+###  http://www.lseid.org/ns/lseid#Outcome
+<http://www.lseid.org/ns/lseid#Outcome> rdf:type owl:Class ;
+                                        rdfs:comment "The result produced by a guideline" ;
+                                        rdfs:label "Outcome" .
+
+
+###  http://www.lseid.org/ns/lseid#RiskMitigationMeasure
+<http://www.lseid.org/ns/lseid#RiskMitigationMeasure> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.lseid.org/ns/lseid#Measure> ;
+                                                      rdfs:comment "This class is used to indicate the measure that has been taken to mitigate a risk" ;
+                                                      rdfs:label "RiskMitigationMeasure" .
+
+
+###  http://www.lseid.org/ns/lseid#SecurityMeasure
+<http://www.lseid.org/ns/lseid#SecurityMeasure> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.lseid.org/ns/lseid#Measure> ;
+                                                rdfs:comment "This class is used to indicate a measure that has been taken to prevent the misuse of data" ;
+                                                rdfs:label "SecurityMeasure" .
+
+
+###  http://www.lseid.org/ns/lseid#Stakeholder
+<http://www.lseid.org/ns/lseid#Stakeholder> rdf:type owl:Class ;
+                                            rdfs:comment "A person (or authority) of interest" ;
+                                            rdfs:label "Stakeholder" .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
+                                    rdfs:comment "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja ,
+                                                 "A collection of data, published or curated by a single source, and available for access or download in one or more representations."@en ,
+                                                 "En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som er til råde for adgang til eller download af i en eller flere repræsentationer."@da ,
+                                                 "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech."@cs ,
+                                                 "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it ,
+                                                 "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es ,
+                                                 "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr ,
+                                                 "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el ,
+                                                 "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar ;
+                                    rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
+                                    rdfs:label "Conjunto de datos"@es ,
+                                               "Dataset"@en ,
+                                               "Dataset"@it ,
+                                               "Datasæt"@da ,
+                                               "Datová sada"@cs ,
+                                               "Jeu de données"@fr ,
+                                               "Σύνολο Δεδομένων"@el ,
+                                               "قائمة بيانات"@ar ,
+                                               "データセット"@ja ;
+                                    <http://www.w3.org/2004/02/skos/core#altLabel> "Datasamling"@da ;
+                                    <http://www.w3.org/2004/02/skos/core#changeNote> "2018-02 - odstraněno tvrzení o podtřídě dctype:Dataset, jelikož rozsah dcat:Dataset zahrnuje několik dalších typů ze slovníku dctype."@cs ,
+                                                                                     "2018-02 - se eliminó el axioma de subclase con dctype:Dataset porque el alcance de dcat:Dataset incluye muchos otros tipos del vocabulario dctype."@es ,
+                                                                                     "2018-02 - sottoclasse di dctype:Dataset rimosso perché l'ambito di dcat:Dataset include diversi altri tipi dal vocabolario dctype."@it ,
+                                                                                     "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary."@en ,
+                                                                                     "2018-02 - subklasse af dctype:Dataset fjernet da scope af dcat:Dataset omfatter flere forskellige typer fra dctype-vokabularet."@da ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja ,
+                                                                                     "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en ,
+                                                                                     "En samling a data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som der er adgang til i en eller flere repræsentationer."@da ,
+                                                                                     "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech."@cs ,
+                                                                                     "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it ,
+                                                                                     "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es ,
+                                                                                     "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr ,
+                                                                                     "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el ,
+                                                                                     "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar ;
+                                    <http://www.w3.org/2004/02/skos/core#editorialNote> "2020-03-16 A new scopenote added and need to be translated"@en ;
+                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Cette classe représente le jeu de données publié par le fournisseur de données. Dans les cas où une distinction est nécessaire entre le jeu de donénes et son entrée dans le catalogue, la classe registre de données peut être utilisée pour ce dernier."@fr ,
+                                                                                    "Denne klasse beskriver det konceptuelle datasæt. En eller flere repræsentationer kan være tilgængelige med forskellige skematiske opsætninger, formater eller serialiseringer."@da ,
+                                                                                    "Denne klasse repræsenterer det konkrete datasæt som det udgives af datasætleverandøren. I de tilfælde hvor det er nødvendigt at skelne mellem det konkrete datasæt og dets registrering i kataloget (fordi metadata såsom ændringsdato og vedligeholder er forskellige), så kan klassen katalogpost anvendes. "@da ,
+                                                                                    "Esta clase representa el conjunto de datos publicados. En los casos donde es necesario distinguir entre el conjunto de datos y su entrada en el catálogo de datos, se debe utilizar la clase 'registro del catálogo'."@es ,
+                                                                                    "Questa classe descrive il dataset dal punto di vista concettuale. Possono essere disponibili una o più rappresentazioni, con diversi layout e formati schematici o serializzazioni."@it ,
+                                                                                    "Questa classe rappresenta il dataset come pubblicato dall’editore. Nel caso in cui sia necessario operare  una distinzione fra i metadati originali del dataset e il record dei metadati ad esso associato nel catalogo (ad esempio, per distinguere la data di modifica del dataset da quella del dataset nel catalogo) si può impiegare la classe catalog record."@it ,
+                                                                                    "Tato třída reprezentuje datovou sadu tak, jak je publikována poskytovatelem dat. V případě potřeby rozlišení datové sady a jejího katalogizačního záznamu (jelikož metadata jako datum modifikace se mohou lišit) pro něj může být použita třída \"katalogizační záznam\"."@cs ,
+                                                                                    "The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities. Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset."@en ,
+                                                                                    "This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations."@en ,
+                                                                                    "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter."@en ,
+                                                                                    "Η κλάση αυτή αναπαριστά το σύνολο δεδομένων αυτό καθ'εαυτό, όπως έχει δημοσιευθεί από τον εκδότη. Σε περιπτώσεις όπου είναι απαραίτητος ο διαχωρισμός μεταξύ του συνόλου δεδομένων και της καταγραφής αυτού στον κατάλογο (γιατί μεταδεδομένα όπως η ημερομηνία αλλαγής και ο συντηρητής μπορεί να διαφέρουν) η κλάση της καταγραφής καταλόγου μπορεί να χρησιμοποιηθεί για το τελευταίο."@el ,
+                                                                                    "このクラスは、データセットの公開者が公開する実際のデータセットを表わします。カタログ内の実際のデータセットとそのエントリーとの区別が必要な場合（修正日と維持者などのメタデータが異なるかもしれないので）は、後者にcatalog recordというクラスを使用できます。"@ja .
+
+
+###  http://www.w3.org/ns/dpv#DataController
+<http://www.w3.org/ns/dpv#DataController> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> ;
+                                          <http://purl.org/dc/terms/created> "2019-04-05"^^xsd:date ;
+                                          <http://purl.org/dc/terms/creator> "Axel Polleres" ,
+                                                                             "Javier Ferenandez" ;
+                                          <http://purl.org/dc/terms/description> "The individual or organisation that decides (or controls) the purpose(s) of processing personal data."@en ;
+                                          <http://purl.org/dc/terms/modified> "2020-11-04"^^xsd:date ;
+                                          rdfs:comment "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
+                                          rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+                                          rdfs:label "Data Controller"@en ;
+                                          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#DataProtectionOfficer
+<http://www.w3.org/ns/dpv#DataProtectionOfficer> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> ;
+                                                 <http://purl.org/dc/terms/created> "2020-11-04"^^xsd:date ;
+                                                 <http://purl.org/dc/terms/creator> "Georg Krog" ,
+                                                                                    "Paul Ryan" ;
+                                                 <http://purl.org/dc/terms/description> "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on your data protection obligations and act as a contact point for data subjects and the supervisory authority."@en ;
+                                                 rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
+                                                 rdfs:label "Data Protection Officer"@en ;
+                                                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#DataSubject
+<http://www.w3.org/ns/dpv#DataSubject> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.lseid.org/ns/lseid#Stakeholder> ;
+                                       <http://purl.org/dc/terms/created> "2019-04-05"^^xsd:date ;
+                                       <http://purl.org/dc/terms/creator> "Axel Polleres" ,
+                                                                          "Javier Ferenandez" ;
+                                       <http://purl.org/dc/terms/description> "The individual (or category of individuals) whose personal data is being processed"@en ;
+                                       <http://purl.org/dc/terms/modified> "2020-11-04"^^xsd:date ;
+                                       rdfs:comment "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
+                                       rdfs:isDefinedBy <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+                                       rdfs:label "Data Subject"@en ;
+                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#LegalBasis
+<http://www.w3.org/ns/dpv#LegalBasis> rdf:type owl:Class ;
+                                      <http://purl.org/dc/terms/created> "2019-04-05"^^xsd:date ;
+                                      <http://purl.org/dc/terms/description> "The Legal basis used to justify processing of personal data"@en ;
+                                      <http://purl.org/dc/terms/modified> "2020-11-04"^^xsd:date ;
+                                      rdfs:comment "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+                                      rdfs:label "Legal Basis"@en ;
+                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#Processing
+<http://www.w3.org/ns/dpv#Processing> rdf:type owl:Class ;
+                                      <http://purl.org/dc/terms/created> "2019-04-05"^^xsd:date ;
+                                      <http://purl.org/dc/terms/creator> "Axel Polleres" ,
+                                                                         "Javier Ferenandez" ;
+                                      <http://purl.org/dc/terms/description> "The processing performed on personal data"@en ;
+                                      <http://purl.org/dc/terms/modified> "2020-11-04"^^xsd:date ;
+                                      rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+                                      rdfs:label "Processing"@en ;
+                                      rdfs:seeAlso <http://www.specialprivacy.eu/langs/usage-policy#AnyProcessing> ;
+                                      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#Purpose
+<http://www.w3.org/ns/dpv#Purpose> rdf:type owl:Class ;
+                                   <http://purl.org/dc/terms/created> "2019-04-05"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "Axel Polleres" ,
+                                                                      "Javier Ferenandez" ;
+                                   <http://purl.org/dc/terms/description> "The purpose of processing personal data"@en ;
+                                   <http://purl.org/dc/terms/modified> "2020-11-04"^^xsd:date ;
+                                   rdfs:isDefinedBy <https://www.specialprivacy.eu/> ;
+                                   rdfs:label "Purpose"@en ;
+                                   rdfs:seeAlso <http://www.specialprivacy.eu/langs/usage-policy#AnyPurpose> ;
+                                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dpv#Risk
+<http://www.w3.org/ns/dpv#Risk> rdf:type owl:Class ;
+                                <http://purl.org/dc/terms/created> "2020-11-18"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> "Harshvardhan J. Pandit" ;
+                                <http://purl.org/dc/terms/description> "A risk or possibility or uncertainty of negative effects, impacts, or consequences."@en ;
+                                rdfs:comment "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+                                rdfs:label "Risk"@en ;
+                                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "accepted"@en .
+
+
+###  http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class ;
+                                  rdfs:comment "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en ;
+                                  rdfs:label "Metric"@en .
+
+
+###  http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class ;
+                                              <http://purl.org/vocab/vann/usageNote> "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en ;
+                                              rdfs:comment "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en ;
+                                              rdfs:label "Quality Measurement"@en .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

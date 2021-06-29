@@ -1,0 +1,743 @@
+@prefix :      <http://www.semanticweb.org/phili/ontologies/2021/4/untitled-ontology-7#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ns:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+
+<https://astrea.linkeddata.es/shapes#a5b13e7444bac426e853be8c188f6c45>
+a               sh:PropertyShape ;
+rdfs:label      "descriptionOfMeasure" , "Detailed description of the taken measure" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Detailed description of the taken measure" ;
+sh:name         "descriptionOfMeasure" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#descriptionOfMeasure> .
+
+<https://astrea.linkeddata.es/shapes#4e6844fee2c7e446b00bdb046bb54464>
+a               sh:PropertyShape ;
+rdfs:label      "descriptionOfGroup" , "Description of the group (i.e. composition of the group)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of the group (i.e. composition of the group)" ;
+sh:name         "descriptionOfGroup" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#descriptionOfGroup> .
+
+<https://astrea.linkeddata.es/shapes#59e902dfc9489f4bf8d99ee75a8b6863>
+a               sh:PropertyShape ;
+rdfs:label      "isSensitiveData" , "Specifies whether the data contains sensitive data" ;
+sh:datatype     xsd:boolean ;
+sh:description  "Specifies whether the data contains sensitive data" ;
+sh:name         "isSensitiveData" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#isSensitiveData> ;
+sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#136d6f274a2c600c7e8935266a02eba3>
+a               sh:PropertyShape ;
+rdfs:label      "hasPurpose" , "Used to define the purpose of the data processing" ;
+sh:class        <http://www.w3.org/ns/dpv#Purpose> ;
+sh:description  "Used to define the purpose of the data processing" ;
+sh:name         "hasPurpose" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasPurpose> .
+
+<https://astrea.linkeddata.es/shapes#542327c8d3426c750d3f092c90d60fdf>
+a               sh:PropertyShape ;
+rdfs:label      "dateOfGuideline" , "The publication date of the guideline" ;
+sh:datatype     xsd:date ;
+sh:description  "The publication date of the guideline" ;
+sh:name         "dateOfGuideline" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#dateOfGuideline> ;
+sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#33e17d57d40a18680d99c1a3117c29b3>
+a               sh:PropertyShape ;
+rdfs:label      "conductsAssessment" , "Used to describe the execution of an Assessment by an organizational Stakeholder" ;
+sh:class        <http://www.lseid.org/ns/lseid#Assessment> ;
+sh:description  "Used to describe the execution of an Assessment by an organizational Stakeholder" ;
+sh:name         "conductsAssessment" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#conductsAssessment> .
+
+<https://astrea.linkeddata.es/shapes#60c28dc97cf22e2a49eabc0336669225>
+a               sh:PropertyShape ;
+rdfs:label      "hasDataSubject" , "Indicates who the Data Subjects are" ;
+sh:class        <http://www.w3.org/ns/dpv#DataSubject> ;
+sh:description  "Indicates who the Data Subjects are" ;
+sh:name         "hasDataSubject" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasDataSubject> .
+
+<https://astrea.linkeddata.es/shapes#2350203935407efed5ec9487f066ac66>
+a               sh:PropertyShape ;
+rdfs:label      "hasSecurityMeasure" , "Indicates the security measure taken to prevent unoconvenient events" ;
+sh:class        <http://www.lseid.org/ns/lseid#SecurityMeasure> ;
+sh:description  "Indicates the security measure taken to prevent unoconvenient events" ;
+sh:name         "hasSecurityMeasure" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasSecurityMeasure> .
+
+<https://astrea.linkeddata.es/shapes#b73bc6d984548990c0b27a10168b5401>
+a               sh:PropertyShape ;
+rdfs:label      "hasDataSource" , "Indicates where Data was taken from" ;
+sh:class        <http://www.lseid.org/ns/lseid#DataSource> ;
+sh:description  "Indicates where Data was taken from" ;
+sh:name         "hasDataSource" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasDataSource> .
+
+<https://astrea.linkeddata.es/shapes#096d6fa390eb512d8ab0eebd64a704be>
+a               sh:PropertyShape ;
+rdfs:label      "isVulnerable" , "Specifies whether the data subject is vulnerable" ;
+sh:datatype     xsd:boolean ;
+sh:description  "Specifies whether the data subject is vulnerable" ;
+sh:name         "isVulnerable" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#isVulnerable> ;
+sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#95789ba96bc700c7c29fdff4ac903241>
+a               sh:PropertyShape ;
+rdfs:label      "producesOutcome" , "Used to describe the outcome of an assessment" ;
+sh:class        <http://www.lseid.org/ns/lseid#Outcome> ;
+sh:description  "Used to describe the outcome of an assessment" ;
+sh:name         "producesOutcome" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#producesOutcome> .
+
+<https://astrea.linkeddata.es/shapes#d1c07c0d6136caab35b13b17aff037cc>
+a               sh:PropertyShape ;
+rdfs:label      "hasRisk" , "Indicates the risks of processing the data" ;
+sh:class        <http://www.w3.org/ns/dpv#Risk> ;
+sh:description  "Indicates the risks of processing the data" ;
+sh:name         "hasRisk" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasRisk> .
+
+<https://astrea.linkeddata.es/shapes#9ad4cae2d4936779bf0a26c504f230fc>
+a               sh:PropertyShape ;
+rdfs:label      "involvedIn" , "Used to indicate the data involved in the data processing" ;
+sh:class        <http://www.w3.org/ns/dpv#Processing> ;
+sh:description  "Used to indicate the data involved in the data processing" ;
+sh:name         "involvedIn" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#involvedIn> .
+
+<https://astrea.linkeddata.es/shapes#bdd27afc2a5c2ce29f82f4f22d650914>
+a               sh:PropertyShape ;
+rdfs:label      "producesEvaluation" , "Indicates the result of a consultation of an authority with a data controller" ;
+sh:class        <http://www.lseid.org/ns/lseid#Evaluation> ;
+sh:description  "Indicates the result of a consultation of an authority with a data controller" ;
+sh:name         "producesEvaluation" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#producesEvaluation> .
+
+<https://astrea.linkeddata.es/shapes#c363aed4d54a1c40945ddab75e2f58fd>
+a               sh:PropertyShape ;
+rdfs:label      "followsGuideline" , "Indicates what Guideline was used for carrying out an Assessment" ;
+sh:class        <http://www.lseid.org/ns/lseid#Guideline> ;
+sh:description  "Indicates what Guideline was used for carrying out an Assessment" ;
+sh:name         "followsGuideline" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#followsGuideline> .
+
+<https://astrea.linkeddata.es/shapes#abfff1c4466d71aadfb2e1063cb00c51>
+a               sh:PropertyShape ;
+rdfs:label      "consultsWith" , "Indicates that Data Controller consults with an Authority over a dataset and it's possible processing applications" ;
+sh:class        <http://www.lseid.org/ns/lseid#Authority> ;
+sh:description  "Indicates that Data Controller consults with an Authority over a dataset and it's possible processing applications" ;
+sh:name         "consultsWith" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#consultsWith> .
+
+<https://astrea.linkeddata.es/shapes#ba4d6f862b4d431ba42cdf0536ca972d>
+a               sh:PropertyShape ;
+rdfs:label      "nameOfStakeholder" , "The name of the stakeholder" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "The name of the stakeholder" ;
+sh:name         "nameOfStakeholder" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#nameOfStakeholder> .
+
+<https://astrea.linkeddata.es/shapes#3b5f6780b2dd46b36b07451ee828a540>
+a               sh:NodeShape ;
+rdfs:label      "RiskMitigationMeasure" ;
+sh:description  "This class is used to indicate the measure that has been taken to mitigate a risk" ;
+sh:name         "RiskMitigationMeasure" ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#RiskMitigationMeasure> .
+
+<https://astrea.linkeddata.es/shapes#94f21611bbd670d23f3af73f76766ae1>
+a               sh:NodeShape ;
+rdfs:label      "Authority" ;
+sh:description  "An official institution" ;
+sh:name         "Authority" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#bdd27afc2a5c2ce29f82f4f22d650914> , <https://astrea.linkeddata.es/shapes#24d9792b899f62456a374594002c2f86> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Authority> .
+
+<https://astrea.linkeddata.es/shapes#5aa6a3071ebe0daba8f24db7ef390c88>
+a               sh:PropertyShape ;
+rdfs:label      "descriptionOfDataApplication" , "Detailed description of the specific usage of the data" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Detailed description of the specific usage of the data" ;
+sh:name         "descriptionOfDataApplication" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#descriptionOfDataApplication> .
+
+<https://astrea.linkeddata.es/shapes#ffe3d3f09f1c44d89390b1012abee8ad>
+a               sh:PropertyShape ;
+rdfs:label      "isPersonalData" , "Specifies whether the data contains personal data" ;
+sh:datatype     xsd:boolean ;
+sh:description  "Specifies whether the data contains personal data" ;
+sh:name         "isPersonalData" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#isPersonalData> ;
+sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#fac2c310a5533f33d5880831654963a2>
+a               sh:PropertyShape ;
+rdfs:label      "containsBias" , "Indicates what kind of Bias a dataset contains" ;
+sh:class        <http://www.lseid.org/ns/lseid#Bias> ;
+sh:description  "Indicates what kind of Bias a dataset contains" ;
+sh:name         "containsBias" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#containsBias> .
+
+<https://astrea.linkeddata.es/shapes#3405c5647ca61f0d291ae2aeeb018128>
+a               sh:PropertyShape ;
+rdfs:label      "impact" , "Description of the impact" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of the impact" ;
+sh:name         "impact" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#impact> .
+
+<https://astrea.linkeddata.es/shapes#b9a1c03f80dd7a03e5896ea1503f0e6b>
+a               sh:PropertyShape ;
+rdfs:label      "descriptionOfBias" , "Detailed description of the bias (i.e. 85% male data vs 15% female data)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Detailed description of the bias (i.e. 85% male data vs 15% female data)" ;
+sh:name         "descriptionOfBias" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#descriptionOfBias> .
+
+<https://astrea.linkeddata.es/shapes#49f82edc18cce0d8f50ffd99e85e384a>
+a               sh:PropertyShape ;
+rdfs:label      "isAboutProcessing" , "Used to describe the data processing that the assessment is targeting" ;
+sh:class        <http://www.w3.org/ns/dpv#Processing> ;
+sh:description  "Used to describe the data processing that the assessment is targeting" ;
+sh:name         "isAboutProcessing" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#isAboutProcessing> .
+
+<https://astrea.linkeddata.es/shapes#097366decbf3561fb65d2f42b7152c5f>
+a               sh:NodeShape ;
+rdfs:label      "Legal Basis"@en ;
+sh:description  "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions."@en ;
+sh:name         "Legal Basis"@en ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.w3.org/ns/dpv#LegalBasis> .
+
+<https://astrea.linkeddata.es/shapes#b40bd69c6e37ec8343e83dd94a088cd3>
+a               sh:NodeShape ;
+rdfs:label      "Quality Measurement"@en ;
+sh:description  "Represents the evaluation of a given dataset (or dataset distribution) against a specific quality metric."@en ;
+sh:name         "Quality Measurement"@en ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#61682ad62b7fb3541bf303a5be35bfb9> ;
+sh:targetClass  <http://www.w3.org/ns/dqv#QualityMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#aaf8e6a1407b282fb7069f223d2c323b>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <https://www.specialprivacy.eu/> ;
+rdfs:label        "Processing"@en ;
+rdfs:seeAlso      <http://www.specialprivacy.eu/langs/usage-policy#AnyProcessing> ;
+sh:name           "Processing"@en ;
+sh:nodeKind       sh:IRI ;
+sh:property       <https://astrea.linkeddata.es/shapes#5aa6a3071ebe0daba8f24db7ef390c88> , <https://astrea.linkeddata.es/shapes#d1c07c0d6136caab35b13b17aff037cc> , <https://astrea.linkeddata.es/shapes#ada0a743f48e43cf2642ff73c1934595> , <https://astrea.linkeddata.es/shapes#136d6f274a2c600c7e8935266a02eba3> ;
+sh:targetClass    <http://www.w3.org/ns/dpv#Processing> .
+
+<https://astrea.linkeddata.es/shapes#34b5b5aa140e75f019e54975b532a30a>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <https://www.specialprivacy.eu/> ;
+rdfs:label        "Purpose"@en ;
+rdfs:seeAlso      <http://www.specialprivacy.eu/langs/usage-policy#AnyPurpose> ;
+sh:name           "Purpose"@en ;
+sh:nodeKind       sh:IRI ;
+sh:property       <https://astrea.linkeddata.es/shapes#a8c88f9392e364b86fea6919ff5ee3c3> ;
+sh:targetClass    <http://www.w3.org/ns/dpv#Purpose> .
+
+<https://astrea.linkeddata.es/report/0620946147>
+a       <https://w3id.org/def/astrea#ReportEntry> ;
+<https://w3id.org/def/astrea#message>
+"Shapes generated with no errors" ;
+<https://w3id.org/def/astrea#statusCode>
+"200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#3b7c616c5336f0926f0632b8cbe05076>
+a               sh:PropertyShape ;
+rdfs:label      "lastDate" , "Specifies when the data collection ended" ;
+sh:datatype     xsd:dateTime ;
+sh:description  "Specifies when the data collection ended" ;
+sh:name         "lastDate" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#lastDate> ;
+sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#70c6e65278758c4547b5cd9d7262667b>
+a                sh:PropertyShape ;
+rdfs:label       "dateOfOutcome" , "The date when the outcome was produced" ;
+sh:datatype      xsd:byte ;
+sh:description   "The date when the outcome was produced" ;
+sh:maxInclusive  127 ;
+sh:minInclusive  -128 ;
+sh:name          "dateOfOutcome" ;
+sh:nodeKind      sh:Literal ;
+sh:path          <http://www.lseid.org/ns/lseid#dateOfOutcome> ;
+sh:pattern       "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#32f808348d1252924bbc9afeeb4bf5f0>
+a               sh:NodeShape ;
+rdfs:label      "DataSource" ;
+sh:description  "Specifies where data comes from" ;
+sh:name         "DataSource" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#428972526c1071c2e982bb6ea28a09d7> , <https://astrea.linkeddata.es/shapes#ecc54a49365ff1313a1a2051ddf7af57> , <https://astrea.linkeddata.es/shapes#14d31d04ad639a16c30e53e5b459bbfa> , <https://astrea.linkeddata.es/shapes#3b7c616c5336f0926f0632b8cbe05076> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#DataSource> .
+
+<https://astrea.linkeddata.es/shapes#79545057f17b5e21503ee13c491525b5>
+a               sh:NodeShape ;
+rdfs:label      "Measure" ;
+sh:description  "This entity is used to indicate an action that has been taken to achieve a specific goal (the sub-classes of this class specify the type of action that has been taken)" ;
+sh:name         "Measure" ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Measure> .
+
+<https://astrea.linkeddata.es/shapes#95d62328b15859faf52c0a6100edfffd>
+a               sh:NodeShape ;
+rdfs:label      "Evaluation" ;
+sh:description  "The outcome or response to a request" ;
+sh:name         "Evaluation" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#e5be62eda321e42285c4a39a9d964ed9> , <https://astrea.linkeddata.es/shapes#15008f53898a6044f5117b32a8d8cfaf> , <https://astrea.linkeddata.es/shapes#c69827a2da90ec62a69e1e252d12f3a7> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Evaluation> .
+
+<https://astrea.linkeddata.es/shapes#e5be62eda321e42285c4a39a9d964ed9>
+a               sh:PropertyShape ;
+rdfs:label      "isAbout" , "Indicates the data processing that was evaluated" ;
+sh:class        <http://www.w3.org/ns/dpv#Processing> ;
+sh:description  "Indicates the data processing that was evaluated" ;
+sh:name         "isAbout" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#isAbout> .
+
+<https://astrea.linkeddata.es/shapes#24d9792b899f62456a374594002c2f86>
+a               sh:PropertyShape ;
+rdfs:label      "nameOfAuthority" , "The name of the corresponding authority" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "The name of the corresponding authority" ;
+sh:name         "nameOfAuthority" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#nameOfAuthority> .
+
+<https://astrea.linkeddata.es/shapes#89ebab1d368d6d64d51d53a12600bbcd>
+a               sh:PropertyShape ;
+rdfs:label      "likeliness" , "Description of how probable the event is going to happen" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of how probable the event is going to happen" ;
+sh:name         "likeliness" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#likeliness> .
+
+<https://astrea.linkeddata.es/shapes#95dd7f4d3ccc2ab7efd751e04c99d884>
+a               sh:NodeShape ;
+rdfs:label      "OrganizationalStakeholder" ;
+sh:description  "Stakeholder that can be considered as an organized entity or institution" ;
+sh:name         "OrganizationalStakeholder" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#33e17d57d40a18680d99c1a3117c29b3> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#OrganizationalStakeholder> .
+
+<https://astrea.linkeddata.es/shapes#d38394617faceae1f22470489e56a3c6>
+a               sh:PropertyShape ;
+rdfs:label      "containsData" , "Indicates the content of the dataset" ;
+sh:class        <http://www.lseid.org/ns/lseid#Data> ;
+sh:description  "Indicates the content of the dataset" ;
+sh:name         "containsData" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#containsData> .
+
+<https://astrea.linkeddata.es/shapes#8405c50735fdd547b4f41d7961a7cc3a>
+a               sh:PropertyShape ;
+rdfs:label      "typeOfDataSubject" , "Specifies who the data subject is (i.e. adult, child, etc.)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Specifies who the data subject is (i.e. adult, child, etc.)" ;
+sh:name         "typeOfDataSubject" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#typeOfDataSubject> .
+
+<https://astrea.linkeddata.es/shapes#ecc54a49365ff1313a1a2051ddf7af57>
+a               sh:PropertyShape ;
+rdfs:label      "method" , "Specifies which method was used to collect the data" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Specifies which method was used to collect the data" ;
+sh:name         "method" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#method> .
+
+<https://astrea.linkeddata.es/shapes#a3c099e8ab87ccf1e941e8ad9d933622>
+a               sh:PropertyShape ;
+rdfs:label      "hasDataController" , "Indicates the Data Controller of the Data" ;
+sh:class        <http://www.w3.org/ns/dpv#DataController> ;
+sh:description  "Indicates the Data Controller of the Data" ;
+sh:name         "hasDataController" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasDataController> .
+
+<https://astrea.linkeddata.es/shapes#80e6bf097e6f8ee5206e85751d4d2df7>
+a               sh:PropertyShape ;
+rdfs:label      "typeOfBias" , "Description of the type of the bias (i.e. unbalanced data)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of the type of the bias (i.e. unbalanced data)" ;
+sh:name         "typeOfBias" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#typeOfBias> .
+
+<https://astrea.linkeddata.es/shapes#690442388b303612b936759d34b433e8>
+a               sh:NodeShape ;
+rdfs:label      "Risk"@en ;
+sh:description  "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure."@en ;
+sh:name         "Risk"@en ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#b00aaa23710cbb0488db35ada5aa5771> , <https://astrea.linkeddata.es/shapes#3b332c94915185ae686aafd3a530bbc0> , <https://astrea.linkeddata.es/shapes#89ebab1d368d6d64d51d53a12600bbcd> , <https://astrea.linkeddata.es/shapes#dddc052d22505200f9a89e1a66b84edc> , <https://astrea.linkeddata.es/shapes#942c1b5e430684f2d073abfc40e35140> , <https://astrea.linkeddata.es/shapes#3405c5647ca61f0d291ae2aeeb018128> ;
+sh:targetClass  <http://www.w3.org/ns/dpv#Risk> .
+
+<https://astrea.linkeddata.es/shapes#fad159b3eecb7b3b530197f96509aa5c>
+a               sh:PropertyShape ;
+rdfs:label      "typeOfAssessment" , "Description of assessment type (i.e. DPIA, Ethical Assessment, etc.)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of assessment type (i.e. DPIA, Ethical Assessment, etc.)" ;
+sh:name         "typeOfAssessment" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#typeOfAssessment> .
+
+<https://astrea.linkeddata.es/shapes#61682ad62b7fb3541bf303a5be35bfb9>
+a            sh:PropertyShape ;
+sh:class     <http://www.w3.org/ns/dqv#Metric> ;
+sh:nodeKind  sh:BlankNodeOrIRI ;
+sh:path      <https://www.w3.org/ns/dqv#isMeasurementOf> .
+
+<https://astrea.linkeddata.es/shapes#c69827a2da90ec62a69e1e252d12f3a7>
+a               sh:PropertyShape ;
+rdfs:label      "evaluationText" , "The content of an evaluation" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "The content of an evaluation" ;
+sh:name         "evaluationText" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#evaluationText> .
+
+<https://astrea.linkeddata.es/shapes#64b795f770bdf9f3cc005c6c2410be8c>
+a               sh:NodeShape ;
+rdfs:label      "Guideline" ;
+sh:description  "A common standard or step by step guide" ;
+sh:name         "Guideline" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#542327c8d3426c750d3f092c90d60fdf> , <https://astrea.linkeddata.es/shapes#2cc9ccda1683773455d7b959acbb5a47> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Guideline> .
+
+<https://astrea.linkeddata.es/shapes#3b332c94915185ae686aafd3a530bbc0>
+a               sh:PropertyShape ;
+rdfs:label      "hasRiskMitigationMeasure" , "This property is used to indicate which mitigation measure has been taken" ;
+sh:class        <http://www.lseid.org/ns/lseid#RiskMitigationMeasure> ;
+sh:description  "This property is used to indicate which mitigation measure has been taken" ;
+sh:name         "hasRiskMitigationMeasure" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasRiskMitigationMeasure> .
+
+<https://astrea.linkeddata.es/shapes#ad31bcf9c6b901d5f2cd1012ec371d3d>
+a               sh:PropertyShape ;
+rdfs:label      "purposeOfCollectingData" , "Describes the reason for the data collection" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Describes the reason for the data collection" ;
+sh:name         "purposeOfCollectingData" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#purposeOfCollectingData> .
+
+<https://astrea.linkeddata.es/shapes#07300c357d88e6f577344a254c7324ca>
+a               sh:PropertyShape ;
+rdfs:label      "outcomeDescription" , "Detailed description of the outcome" ;
+sh:datatype     xsd:decimal ;
+sh:description  "Detailed description of the outcome" ;
+sh:name         "outcomeDescription" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#outcomeDescription> ;
+sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
+
+<https://astrea.linkeddata.es/shapes#942c1b5e430684f2d073abfc40e35140>
+a               sh:PropertyShape ;
+rdfs:label      "descriptionOfRisk" , "Detailed description of the risk" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Detailed description of the risk" ;
+sh:name         "descriptionOfRisk" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#descriptionOfRisk> .
+
+<https://astrea.linkeddata.es/shapes#95354c69876106d0cc28a123d9804bea>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_1/oj> ;
+rdfs:label        "Data Subject"@en ;
+sh:description    "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'."@en ;
+sh:name           "Data Subject"@en ;
+sh:nodeKind       sh:IRI ;
+sh:property       <https://astrea.linkeddata.es/shapes#8405c50735fdd547b4f41d7961a7cc3a> , <https://astrea.linkeddata.es/shapes#096d6fa390eb512d8ab0eebd64a704be> ;
+sh:targetClass    <http://www.w3.org/ns/dpv#DataSubject> .
+
+<https://astrea.linkeddata.es/shapes#15008f53898a6044f5117b32a8d8cfaf>
+a               sh:PropertyShape ;
+rdfs:label      "evaluationDate" , "The date of the evaluation" ;
+sh:datatype     xsd:date ;
+sh:description  "The date of the evaluation" ;
+sh:name         "evaluationDate" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#evaluationDate> ;
+sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#54e37348a192f973757118a3612e123a>
+a            sh:PropertyShape ;
+sh:class     <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+sh:nodeKind  sh:BlankNodeOrIRI ;
+sh:path      <https://www.w3.org/ns/dqv#hasQualityMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#95a81284b7f97f98b1a731abefb45272>
+a               sh:NodeShape ;
+rdfs:label      "OtherPurpose" ;
+sh:description  "Used for any purpose that is neither considered to be the inital purpose nor a discouraged purpose" ;
+sh:name         "OtherPurpose" ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#OtherPurpose> .
+
+<https://astrea.linkeddata.es/shapes#14d31d04ad639a16c30e53e5b459bbfa>
+a               sh:PropertyShape ;
+rdfs:label      "authorOfDataCollection" , "Used to indicate the responsible person or organization of the data collection" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Used to indicate the responsible person or organization of the data collection" ;
+sh:name         "authorOfDataCollection" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#authorOfDataCollection> .
+
+<https://astrea.linkeddata.es/shapes#b8c671b6b40692c8d5baeeebc03e2795>
+a               sh:NodeShape ;
+rdfs:label      "SecurityMeasure" ;
+sh:description  "This class is used to indicate a measure that has been taken to prevent the misuse of data" ;
+sh:name         "SecurityMeasure" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#a5b13e7444bac426e853be8c188f6c45> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#SecurityMeasure> .
+
+<https://astrea.linkeddata.es/shapes#9ae0750bc4a8286b6a21d8cc347254a9>
+a               sh:NodeShape ;
+rdfs:label      "Data" ;
+sh:description  "A piece of information. A collection of Data forms a Dataset" ;
+sh:name         "Data" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#ffe3d3f09f1c44d89390b1012abee8ad> , <https://astrea.linkeddata.es/shapes#9ad4cae2d4936779bf0a26c504f230fc> , <https://astrea.linkeddata.es/shapes#a3c099e8ab87ccf1e941e8ad9d933622> , <https://astrea.linkeddata.es/shapes#700cb645ed806cba0c50adfe512cd2c4> , <https://astrea.linkeddata.es/shapes#b73bc6d984548990c0b27a10168b5401> , <https://astrea.linkeddata.es/shapes#59e902dfc9489f4bf8d99ee75a8b6863> , <https://astrea.linkeddata.es/shapes#8b50066a7f6dd135a342df272ed69242> , <https://astrea.linkeddata.es/shapes#60c28dc97cf22e2a49eabc0336669225> , <https://astrea.linkeddata.es/shapes#ad31bcf9c6b901d5f2cd1012ec371d3d> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Data> .
+
+<https://astrea.linkeddata.es/shapes#c25daebf93ea42ebc6253cab9322b119>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <https://eur-lex.europa.eu/eli/reg/2016/679/art_4/par_7/oj> ;
+rdfs:label        "Data Controller"@en ;
+sh:description    "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used."@en ;
+sh:name           "Data Controller"@en ;
+sh:nodeKind       sh:IRI ;
+sh:property       <https://astrea.linkeddata.es/shapes#abfff1c4466d71aadfb2e1063cb00c51> ;
+sh:targetClass    <http://www.w3.org/ns/dpv#DataController> .
+
+<https://astrea.linkeddata.es/shapes#4875c9c1028becd4fc320a7f7eded944>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj> ;
+rdfs:label        "Data Protection Officer"@en ;
+sh:name           "Data Protection Officer"@en ;
+sh:nodeKind       sh:IRI ;
+sh:targetClass    <http://www.w3.org/ns/dpv#DataProtectionOfficer> .
+
+<https://astrea.linkeddata.es/shapes#b1ae30c2bb5ed4ecadbfb813536ff8fb>
+a               sh:NodeShape ;
+rdfs:label      "Outcome" ;
+sh:description  "The result produced by a guideline" ;
+sh:name         "Outcome" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#70c6e65278758c4547b5cd9d7262667b> , <https://astrea.linkeddata.es/shapes#07300c357d88e6f577344a254c7324ca> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Outcome> .
+
+<https://astrea.linkeddata.es/shapes#a8c88f9392e364b86fea6919ff5ee3c3>
+a               sh:PropertyShape ;
+rdfs:label      "affectsGroup" , "Indicates which groups are affected by the Purpose of the data processing" ;
+sh:class        <http://www.lseid.org/ns/lseid#Group> ;
+sh:description  "Indicates which groups are affected by the Purpose of the data processing" ;
+sh:name         "affectsGroup" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#affectsGroup> .
+
+<https://astrea.linkeddata.es/shapes#dddc052d22505200f9a89e1a66b84edc>
+a               sh:PropertyShape ;
+rdfs:label      "isAssociatedWith" , "This property is used to indicate the dataset with which the risk is associated with" ;
+sh:class        <http://www.w3.org/ns/dcat#Dataset> ;
+sh:description  "This property is used to indicate the dataset with which the risk is associated with" ;
+sh:name         "isAssociatedWith" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#isAssociatedWith> .
+
+<https://astrea.linkeddata.es/shapes#700cb645ed806cba0c50adfe512cd2c4>
+a               sh:PropertyShape ;
+rdfs:label      "typeOfData" , "Description of the data" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of the data" ;
+sh:name         "typeOfData" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#typeOfData> .
+
+<http://astrea.linkeddata.es/report>
+a       <https://w3id.org/def/astrea#ShapeReport> ;
+<https://w3id.org/def/astrea#contains>
+<https://astrea.linkeddata.es/shapes#89ebab1d368d6d64d51d53a12600bbcd> , <https://astrea.linkeddata.es/shapes#b8c671b6b40692c8d5baeeebc03e2795> , <https://astrea.linkeddata.es/shapes#dbc75f1e2529bfb054ea0019e1762d25> , <https://astrea.linkeddata.es/shapes#14d31d04ad639a16c30e53e5b459bbfa> , <https://astrea.linkeddata.es/shapes#95354c69876106d0cc28a123d9804bea> , <https://astrea.linkeddata.es/shapes#49f82edc18cce0d8f50ffd99e85e384a> , <https://astrea.linkeddata.es/shapes#59e902dfc9489f4bf8d99ee75a8b6863> , <https://astrea.linkeddata.es/shapes#c25daebf93ea42ebc6253cab9322b119> , <https://astrea.linkeddata.es/shapes#bdd27afc2a5c2ce29f82f4f22d650914> , <https://astrea.linkeddata.es/shapes#fac2c310a5533f33d5880831654963a2> , <https://astrea.linkeddata.es/shapes#b73bc6d984548990c0b27a10168b5401> , <https://astrea.linkeddata.es/shapes#9ad4cae2d4936779bf0a26c504f230fc> , <https://astrea.linkeddata.es/shapes#ecc54a49365ff1313a1a2051ddf7af57> , <https://astrea.linkeddata.es/shapes#79545057f17b5e21503ee13c491525b5> , <https://astrea.linkeddata.es/shapes#abfff1c4466d71aadfb2e1063cb00c51> , <https://astrea.linkeddata.es/shapes#c363aed4d54a1c40945ddab75e2f58fd> , <https://astrea.linkeddata.es/shapes#8b50066a7f6dd135a342df272ed69242> , <https://astrea.linkeddata.es/shapes#542327c8d3426c750d3f092c90d60fdf> , <https://astrea.linkeddata.es/shapes#32f808348d1252924bbc9afeeb4bf5f0> , <https://astrea.linkeddata.es/shapes#096d6fa390eb512d8ab0eebd64a704be> , <https://astrea.linkeddata.es/shapes#ada0a743f48e43cf2642ff73c1934595> , <https://astrea.linkeddata.es/shapes#524f5a03e64243a51a0c2659e6796ff0> , <https://astrea.linkeddata.es/shapes#5aa6a3071ebe0daba8f24db7ef390c88> , <https://astrea.linkeddata.es/shapes#8405c50735fdd547b4f41d7961a7cc3a> , <https://astrea.linkeddata.es/shapes#136d6f274a2c600c7e8935266a02eba3> , <https://astrea.linkeddata.es/shapes#94f21611bbd670d23f3af73f76766ae1> , <https://astrea.linkeddata.es/shapes#3405c5647ca61f0d291ae2aeeb018128> , <https://astrea.linkeddata.es/shapes#ffe3d3f09f1c44d89390b1012abee8ad> , <https://astrea.linkeddata.es/shapes#54e37348a192f973757118a3612e123a> , <https://astrea.linkeddata.es/shapes#a5b13e7444bac426e853be8c188f6c45> , <https://astrea.linkeddata.es/shapes#61682ad62b7fb3541bf303a5be35bfb9> , <https://astrea.linkeddata.es/shapes#3b332c94915185ae686aafd3a530bbc0> , <https://astrea.linkeddata.es/shapes#690442388b303612b936759d34b433e8> , <https://astrea.linkeddata.es/shapes#d38394617faceae1f22470489e56a3c6> , <https://astrea.linkeddata.es/shapes#4e6844fee2c7e446b00bdb046bb54464> , <https://astrea.linkeddata.es/shapes#b00aaa23710cbb0488db35ada5aa5771> , <https://astrea.linkeddata.es/shapes#d29ebb62770f5beed22aa4d0bf18a332> , <https://astrea.linkeddata.es/shapes#a8c88f9392e364b86fea6919ff5ee3c3> , <https://astrea.linkeddata.es/shapes#a3c099e8ab87ccf1e941e8ad9d933622> , <https://astrea.linkeddata.es/shapes#95dd7f4d3ccc2ab7efd751e04c99d884> , <https://astrea.linkeddata.es/shapes#24d9792b899f62456a374594002c2f86> , <https://astrea.linkeddata.es/shapes#428972526c1071c2e982bb6ea28a09d7> , <https://astrea.linkeddata.es/shapes#700cb645ed806cba0c50adfe512cd2c4> , <https://astrea.linkeddata.es/shapes#64b795f770bdf9f3cc005c6c2410be8c> , <https://astrea.linkeddata.es/shapes#aaf8e6a1407b282fb7069f223d2c323b> , <https://astrea.linkeddata.es/shapes#bed21b12435bd1a3b0277246cb92f4d2> , <https://astrea.linkeddata.es/shapes#fad159b3eecb7b3b530197f96509aa5c> , <https://astrea.linkeddata.es/shapes#b9a1c03f80dd7a03e5896ea1503f0e6b> , <https://astrea.linkeddata.es/shapes#cfac449b3b7594c6c3990a8246ecc3f2> , <https://astrea.linkeddata.es/shapes#097366decbf3561fb65d2f42b7152c5f> , <https://astrea.linkeddata.es/shapes#dddc052d22505200f9a89e1a66b84edc> , <https://astrea.linkeddata.es/shapes#ba4d6f862b4d431ba42cdf0536ca972d> , <https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca> , <https://astrea.linkeddata.es/shapes#95d62328b15859faf52c0a6100edfffd> , <https://astrea.linkeddata.es/shapes#34b5b5aa140e75f019e54975b532a30a> , <https://astrea.linkeddata.es/shapes#942c1b5e430684f2d073abfc40e35140> , <https://astrea.linkeddata.es/shapes#5af15b75e617e8cbe582e2329e1d175f> , <https://astrea.linkeddata.es/shapes#2350203935407efed5ec9487f066ac66> , <https://astrea.linkeddata.es/shapes#b40bd69c6e37ec8343e83dd94a088cd3> , <https://astrea.linkeddata.es/shapes#15008f53898a6044f5117b32a8d8cfaf> , <https://astrea.linkeddata.es/shapes#0bc47a801c8cd656cfb96894590958b3> , <https://astrea.linkeddata.es/shapes#07300c357d88e6f577344a254c7324ca> , <https://astrea.linkeddata.es/shapes#b1ae30c2bb5ed4ecadbfb813536ff8fb> , <https://astrea.linkeddata.es/shapes#270ad6e1d96f045898fde7ef02797fbe> , <https://astrea.linkeddata.es/shapes#95a81284b7f97f98b1a731abefb45272> , <https://astrea.linkeddata.es/shapes#d1c07c0d6136caab35b13b17aff037cc> , <https://astrea.linkeddata.es/shapes#9ae0750bc4a8286b6a21d8cc347254a9> , <https://astrea.linkeddata.es/shapes#3b7c616c5336f0926f0632b8cbe05076> , <https://astrea.linkeddata.es/shapes#60c28dc97cf22e2a49eabc0336669225> , <https://astrea.linkeddata.es/shapes#0b01a480c37672c3a82465db8280ebaf> , <https://astrea.linkeddata.es/shapes#4875c9c1028becd4fc320a7f7eded944> , <https://astrea.linkeddata.es/shapes#33e17d57d40a18680d99c1a3117c29b3> , <https://astrea.linkeddata.es/shapes#80e6bf097e6f8ee5206e85751d4d2df7> , <https://astrea.linkeddata.es/shapes#ad31bcf9c6b901d5f2cd1012ec371d3d> , <https://astrea.linkeddata.es/shapes#2cc9ccda1683773455d7b959acbb5a47> , <https://astrea.linkeddata.es/shapes#95789ba96bc700c7c29fdff4ac903241> , <https://astrea.linkeddata.es/shapes#70c6e65278758c4547b5cd9d7262667b> , <https://astrea.linkeddata.es/shapes#c69827a2da90ec62a69e1e252d12f3a7> , <https://astrea.linkeddata.es/shapes#3b5f6780b2dd46b36b07451ee828a540> , <https://astrea.linkeddata.es/shapes#e5be62eda321e42285c4a39a9d964ed9> ;
+<https://w3id.org/def/astrea#generatedShapesFrom>
+<https://astrea.linkeddata.es/report/0620946147> .
+
+<https://astrea.linkeddata.es/shapes#bed21b12435bd1a3b0277246cb92f4d2>
+a                 sh:NodeShape ;
+rdfs:isDefinedBy  <http://www.w3.org/TR/vocab-dcat/> ;
+rdfs:label        "データセット"@ja , "Datová sada"@cs , "Conjunto de datos"@es , "Σύνολο Δεδομένων"@el , "Jeu de données"@fr , "Dataset"@en , "Dataset"@it , "Datasæt"@da , "قائمة بيانات"@ar ;
+sh:description    "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos."@es , "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar , "A collection of data, published or curated by a single source, and available for access or download in one or more representations."@en , "En samling af data, udgivet eller udvalgt og arrangeret af en enkelt kilde og som er til råde for adgang til eller download af i en eller flere repræsentationer."@da , "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές."@el , "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech."@cs , "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats."@fr , "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it , "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja ;
+sh:name           "Dataset"@it , "Dataset"@en , "データセット"@ja , "Jeu de données"@fr , "قائمة بيانات"@ar , "Σύνολο Δεδομένων"@el , "Datová sada"@cs , "Conjunto de datos"@es , "Datasæt"@da ;
+sh:nodeKind       sh:IRI ;
+sh:property       <https://astrea.linkeddata.es/shapes#2350203935407efed5ec9487f066ac66> , <https://astrea.linkeddata.es/shapes#fac2c310a5533f33d5880831654963a2> , <https://astrea.linkeddata.es/shapes#54e37348a192f973757118a3612e123a> , <https://astrea.linkeddata.es/shapes#d38394617faceae1f22470489e56a3c6> ;
+sh:targetClass    <http://www.w3.org/ns/dcat#Dataset> .
+
+<https://astrea.linkeddata.es/shapes#cfac449b3b7594c6c3990a8246ecc3f2>
+a               sh:NodeShape ;
+rdfs:label      "Metric"@en ;
+sh:description  "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en ;
+sh:name         "Metric"@en ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.w3.org/ns/dqv#Metric> .
+
+<https://astrea.linkeddata.es/shapes#dbc75f1e2529bfb054ea0019e1762d25>
+a               sh:PropertyShape ;
+rdfs:label      "reviewFrequency" , "Used to describe how frequently an assessment is being reviewed" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Used to describe how frequently an assessment is being reviewed" ;
+sh:name         "reviewFrequency" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#reviewFrequency> .
+
+<https://astrea.linkeddata.es/shapes#b00aaa23710cbb0488db35ada5aa5771>
+a               sh:PropertyShape ;
+rdfs:label      "levelOfImpact" , "Description of the level of the impact (i.e. high, low)" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "Description of the level of the impact (i.e. high, low)" ;
+sh:name         "levelOfImpact" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#levelOfImpact> .
+
+<https://astrea.linkeddata.es/shapes#270ad6e1d96f045898fde7ef02797fbe>
+a               sh:NodeShape ;
+rdfs:label      "InitialPurpose" ;
+sh:description  "The main purpose. This is the initial idea on how and why to process the data" ;
+sh:name         "InitialPurpose" ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#InitialPurpose> .
+
+<https://astrea.linkeddata.es/shapes#b8840ae319dd17775a4c3ff2c43caeca>
+a            sh:PropertyShape ;
+sh:nodeKind  sh:Literal .
+
+<https://astrea.linkeddata.es/shapes#0b01a480c37672c3a82465db8280ebaf>
+a               sh:NodeShape ;
+rdfs:label      "Stakeholder" ;
+sh:description  "A person (or authority) of interest" ;
+sh:name         "Stakeholder" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#ba4d6f862b4d431ba42cdf0536ca972d> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Stakeholder> .
+
+<https://astrea.linkeddata.es/shapes#428972526c1071c2e982bb6ea28a09d7>
+a               sh:PropertyShape ;
+rdfs:label      "initialDate" , "Specifies when the data collection started" ;
+sh:datatype     xsd:dateTime ;
+sh:description  "Specifies when the data collection started" ;
+sh:name         "initialDate" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#initialDate> ;
+sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#ada0a743f48e43cf2642ff73c1934595>
+a               sh:PropertyShape ;
+rdfs:label      "hasLegalBasis" , "Indicates the legal basis for data processing" ;
+sh:class        <http://www.w3.org/ns/dpv#LegalBasis> ;
+sh:description  "Indicates the legal basis for data processing" ;
+sh:name         "hasLegalBasis" ;
+sh:nodeKind     sh:BlankNodeOrIRI ;
+sh:path         <http://www.lseid.org/ns/lseid#hasLegalBasis> .
+
+<https://astrea.linkeddata.es/shapes#2cc9ccda1683773455d7b959acbb5a47>
+a               sh:PropertyShape ;
+rdfs:label      "authorOfGuideline" , "The author of the guideline" ;
+sh:datatype     rdfs:Literal ;
+sh:description  "The author of the guideline" ;
+sh:name         "authorOfGuideline" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#authorOfGuideline> .
+
+<https://astrea.linkeddata.es/shapes#d29ebb62770f5beed22aa4d0bf18a332>
+a               sh:NodeShape ;
+rdfs:label      "Bias" ;
+sh:description  "Something that is not equally representative for every affected group" ;
+sh:name         "Bias" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#b9a1c03f80dd7a03e5896ea1503f0e6b> , <https://astrea.linkeddata.es/shapes#80e6bf097e6f8ee5206e85751d4d2df7> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Bias> .
+
+<https://astrea.linkeddata.es/shapes#0bc47a801c8cd656cfb96894590958b3>
+a               sh:NodeShape ;
+rdfs:label      "Group" ;
+sh:description  "Various people that share a common characterstic" ;
+sh:name         "Group" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#4e6844fee2c7e446b00bdb046bb54464> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Group> .
+
+<https://astrea.linkeddata.es/shapes#8b50066a7f6dd135a342df272ed69242>
+a               sh:PropertyShape ;
+rdfs:label      "size" , "Size of data in MB" ;
+sh:datatype     xsd:double ;
+sh:description  "Size of data in MB" ;
+sh:name         "size" ;
+sh:nodeKind     sh:Literal ;
+sh:path         <http://www.lseid.org/ns/lseid#size> ;
+sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#524f5a03e64243a51a0c2659e6796ff0>
+a               sh:NodeShape ;
+rdfs:label      "DiscouragedPurpose" ;
+sh:description  "Discouraged purpose defines a data application that is considered to be risky, not ethical or problematic in any other form" ;
+sh:name         "DiscouragedPurpose" ;
+sh:nodeKind     sh:IRI ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#DiscouragedPurpose> .
+
+<https://astrea.linkeddata.es/shapes#5af15b75e617e8cbe582e2329e1d175f>
+a               sh:NodeShape ;
+rdfs:label      "Assessment" ;
+sh:description  "A judgement about something. It usually analyses the  potential impact and risks" ;
+sh:name         "Assessment" ;
+sh:nodeKind     sh:IRI ;
+sh:property     <https://astrea.linkeddata.es/shapes#dbc75f1e2529bfb054ea0019e1762d25> , <https://astrea.linkeddata.es/shapes#95789ba96bc700c7c29fdff4ac903241> , <https://astrea.linkeddata.es/shapes#c363aed4d54a1c40945ddab75e2f58fd> , <https://astrea.linkeddata.es/shapes#49f82edc18cce0d8f50ffd99e85e384a> , <https://astrea.linkeddata.es/shapes#fad159b3eecb7b3b530197f96509aa5c> ;
+sh:targetClass  <http://www.lseid.org/ns/lseid#Assessment> .
